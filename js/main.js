@@ -26,7 +26,8 @@
   applyLang(store(KEY) === 'en' ? 'en' : 'ar');
 
   function rand(a, b) { return a + Math.random() * (b - a); }
-  var FOAM = ['#f5c842', '#4a90d9', '#6cbf6c', '#f28db2', '#f39c4a', '#c9cdd2', '#d71920', '#f5c842', '#4a90d9'];
+  // Real foam textures cut from City Foam factory footage
+  var FOAM = ['pink', 'red', 'magenta', 'blue', 'orange', 'green', 'pink', 'red'].map(function (n) { return 'url(img/foam/' + n + '.jpg)'; });
 
   /* ---------- Intro: foam flies in from every side, click to pass ---------- */
   function intro() {
@@ -48,7 +49,7 @@
       for (var c = 0; c < cols; c++) {
         var b = document.createElement('div');
         b.className = 'foam-block';
-        b.style.setProperty('--c', FOAM[Math.floor(Math.random() * FOAM.length)]);
+        b.style.backgroundImage = FOAM[Math.floor(Math.random() * FOAM.length)];
         var cx = (c + .5) / cols - .5, cy = (r + .5) / rows - .5;
         var dx, dy;
         if (Math.abs(cx) * W > Math.abs(cy) * H) { dx = Math.sign(cx || 1) * W * rand(.8, 1.1); dy = rand(-80, 80); }
@@ -100,33 +101,30 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' || e.key === 'Enter') leave(); });
   }
 
-  /* ---------- Hero: bouncing figure + floating foam cubes ---------- */
-  function hero() {
-    var scene = document.querySelector('.scene');
-    if (scene) {
-      var bigJump = function () {
-        if (scene.classList.contains('big')) return;
-        scene.classList.add('big');
-      };
-      scene.addEventListener('click', bigJump);
-      scene.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); bigJump(); } });
-      var j = scene.querySelector('.jumper');
-      j.addEventListener('animationend', function (e) {
-        if (e.animationName === 'jump-b') scene.classList.remove('big');
-      });
-    }
-    document.querySelectorAll('.cube').forEach(function (cube) {
-      cube.addEventListener('click', function () {
-        if (cube.classList.contains('pop')) return;
-        cube.classList.remove('respawn');
-        cube.classList.add('pop');
-        setTimeout(function () {
-          cube.classList.remove('pop');
-          cube.classList.add('respawn');
-          setTimeout(function () { cube.classList.remove('respawn'); }, 800);
-        }, 2600);
+  /* ---------- Real foam swatches squish on tap ---------- */
+  function swatches() {
+    document.querySelectorAll('.swatch').forEach(function (sw) {
+      sw.addEventListener('click', function () {
+        sw.classList.remove('squish'); void sw.offsetWidth; sw.classList.add('squish');
       });
     });
+  }
+
+  /* ---------- Factory videos: play only while on screen ---------- */
+  function videos() {
+    var vids = document.querySelectorAll('video[data-autoplay]');
+    if (reduceMotion) return;
+    if (!('IntersectionObserver' in window)) { vids.forEach(function (v) { v.autoplay = true; v.play && v.play().catch(function () {}); }); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var v = en.target;
+        if (en.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+        else v.pause();
+      });
+    }, { threshold: 0.25 });
+    vids.forEach(function (v) { io.observe(v); });
+    var hero = document.querySelector('.hero-video');
+    if (hero) { var hp = hero.play(); if (hp && hp.catch) hp.catch(function () {}); }
   }
 
   /* ---------- Scroll reveal ---------- */
@@ -153,7 +151,8 @@
   document.addEventListener('DOMContentLoaded', function () {
     applyLang(root.lang);
     intro();
-    hero();
+    swatches();
+    videos();
     reveal();
 
     document.querySelectorAll('.lang-btn').forEach(function (b) {

@@ -41,62 +41,22 @@
       <button class="intro-skip" type="button"><span lang="ar">تخطي</span><span lang="en">Skip</span></button>
     </div>
 
-    <section class="hero">
-      <div class="cubes" aria-hidden="true">
-        <span class="cube" style="--x:4%;--y:12%;--s:86px;--c:#f5c842;--r:-14deg;--d:3.4s"></span>
-        <span class="cube" style="--x:44%;--y:6%;--s:58px;--c:#4a90d9;--r:12deg;--d:2.8s"></span>
-        <span class="cube" style="--x:88%;--y:78%;--s:70px;--c:#f28db2;--r:18deg;--d:3.8s"></span>
-        <span class="cube" style="--x:38%;--y:86%;--s:64px;--c:#6cbf6c;--r:-8deg;--d:3.1s"></span>
-        <span class="cube" style="--x:2%;--y:70%;--s:54px;--c:#f39c4a;--r:22deg;--d:2.6s"></span>
-        <span class="cube" style="--x:90%;--y:8%;--s:48px;--c:#c9cdd2;--r:-20deg;--d:3.6s"></span>
-      </div>
+    <section class="hero hero-video-wrap">
+      <div class="hero-bg" aria-hidden="true"></div>
       <div class="container hero-grid">
-        <div>
+        <div class="hero-copy">
           <span class="eyebrow"><span lang="ar">صناعة مصرية بجودة عالمية</span><span lang="en">Egyptian made, world-class quality</span></span>
           <h1><span lang="ar">راحتك تبدأ من <em>سيتي فوم</em></span><span lang="en">Your comfort starts with <em>City Foam</em></span></h1>
-          <p><span lang="ar">نصنّع الإسفنج والمراتب بأعلى معايير الجودة للمنازل والفنادق والمصانع وشركات الأثاث في كل أنحاء مصر.</span><span lang="en">We manufacture foam and mattresses to the highest quality standards for homes, hotels, factories and furniture makers across Egypt.</span></p>
+          <p><span lang="ar">من الصهاريج لخط الصب لبلوكات الإسفنج بألوانها، كل اللي هتشوفه هنا لقطات حقيقية من مصنعنا.</span><span lang="en">From the tanks to the pouring line to colorful foam blocks, everything you see here is real footage from our factory.</span></p>
           <div class="hero-actions">
-            <a href="products.html" class="btn btn-primary"><span lang="ar">تصفح المنتجات</span><span lang="en">Browse Products</span></a>
-            <a href="contact.html" class="btn btn-outline"><span lang="ar">تواصل معنا</span><span lang="en">Contact Us</span></a>
+            <a href="#factory" class="btn btn-primary"><span lang="ar">ادخل المصنع</span><span lang="en">Step inside the factory</span></a>
+            <a href="products.html" class="btn btn-outline"><span lang="ar">تصفح المنتجات</span><span lang="en">Browse Products</span></a>
           </div>
         </div>
-        <div>
-          <div class="scene" role="button" tabindex="0" aria-label="Jump">
-            <svg viewBox="0 0 400 400" aria-hidden="true">
-              <defs>
-                <pattern id="pores" width="9" height="9" patternUnits="userSpaceOnUse">
-                  <circle cx="4.5" cy="4.5" r="1.4" fill="rgba(0,0,0,.14)"/>
-                </pattern>
-              </defs>
-              <ellipse cx="200" cy="386" rx="175" ry="10" fill="rgba(0,0,0,.45)"/>
-              <g class="mattress">
-                <rect x="30" y="330" width="340" height="44" rx="14" fill="#4a90d9"/>
-                <rect x="30" y="330" width="340" height="44" rx="14" fill="url(#pores)"/>
-                <rect x="30" y="292" width="340" height="44" rx="14" fill="#f5c842"/>
-                <rect x="30" y="292" width="340" height="44" rx="14" fill="url(#pores)"/>
-                <rect x="30" y="252" width="340" height="46" rx="16" fill="#d71920"/>
-                <rect x="30" y="252" width="340" height="46" rx="16" fill="url(#pores)"/>
-                <path d="M50 275 H350" stroke="rgba(255,255,255,.4)" stroke-width="2" stroke-dasharray="7 7"/>
-                <rect x="30" y="252" width="340" height="8" rx="4" fill="rgba(255,255,255,.18)"/>
-              </g>
-              <ellipse class="jump-shadow" cx="200" cy="254" rx="42" ry="6" fill="rgba(0,0,0,.4)"/>
-              <g class="jumper">
-                <g class="jumper-spin">
-                  <g stroke="#fff" stroke-width="11" stroke-linecap="round" fill="none">
-                    <path d="M191 250 L193 212"/>
-                    <path d="M209 250 L207 212"/>
-                    <path class="arm-l" d="M186 170 L178 208"/>
-                    <path class="arm-r" d="M214 170 L222 208"/>
-                  </g>
-                  <rect x="181" y="156" width="38" height="62" rx="17" fill="#fff"/>
-                  <rect x="181" y="186" width="38" height="9" fill="#d71920"/>
-                  <circle cx="200" cy="134" r="18" fill="#fff"/>
-                </g>
-              </g>
-            </svg>
-          </div>
-          <p class="scene-hint"><span lang="ar"><b>اضغط على المرتبة</b> وشوف النطّة</span><span lang="en"><b>Tap the mattress</b> for a big jump</span></p>
-        </div>
+        <figure class="hero-media">
+          <video class="hero-video" src="media/hero.mp4" poster="media/hero.jpg" autoplay muted loop playsinline preload="auto" aria-label="Foam blocks at City Foam factory"></video>
+          <figcaption><span class="live-dot"></span><span lang="ar">لقطة حقيقية — مخزن البلوكات</span><span lang="en">Real footage — foam block yard</span></figcaption>
+        </figure>
       </div>
     </section>
 
@@ -104,6 +64,68 @@
       <div class="marquee-track" lang="ar"><span>إسفنج ألواح</span><i></i><span>مراتب طبية</span><i></i><span>سوست بوكت</span><i></i><span>سوست بونيل</span><i></i><span>إسفنج أثاث</span><i></i><span>مخدات فايبر</span><i></i><span>تقطيع حسب الطلب</span><i></i><span>توصيل لكل مصر</span><i></i><span>إسفنج ألواح</span><i></i><span>مراتب طبية</span><i></i><span>سوست بوكت</span><i></i><span>سوست بونيل</span><i></i><span>إسفنج أثاث</span><i></i><span>مخدات فايبر</span><i></i><span>تقطيع حسب الطلب</span><i></i><span>توصيل لكل مصر</span><i></i></div>
       <div class="marquee-track" lang="en"><span>Foam Sheets</span><i></i><span>Medical Mattresses</span><i></i><span>Pocket Springs</span><i></i><span>Bonnell Springs</span><i></i><span>Furniture Foam</span><i></i><span>Fiber Pillows</span><i></i><span>Custom Cutting</span><i></i><span>Nationwide Delivery</span><i></i><span>Foam Sheets</span><i></i><span>Medical Mattresses</span><i></i><span>Pocket Springs</span><i></i><span>Bonnell Springs</span><i></i><span>Furniture Foam</span><i></i><span>Fiber Pillows</span><i></i><span>Custom Cutting</span><i></i><span>Nationwide Delivery</span><i></i></div>
     </div>
+
+    <section class="section section-dark factory" id="factory">
+      <div class="container">
+        <div class="center">
+          <span class="eyebrow"><span lang="ar">جوه المصنع</span><span lang="en">Inside the factory</span></span>
+          <h2 class="section-title reveal"><span lang="ar">رحلة الإسفنج من الخامة للبلوك</span><span lang="en">How foam is made, from raw material to block</span></h2>
+          <p class="section-lead reveal"><span lang="ar">لقطات حقيقية من خطوط الإنتاج في سيتي فوم، بدون أي تعديل.</span><span lang="en">Real, unedited footage from City Foam production lines.</span></p>
+        </div>
+        <div class="fsteps">
+        <article class="fstep reveal">
+          <div class="fstep-media"><img src="media/tanks.jpg" alt="" loading="lazy"><span class="real-tag"><span lang="ar">حقيقي</span><span lang="en">Real</span></span></div>
+          <div class="fstep-text">
+            <span class="fstep-num">01</span>
+            <h3><span lang="ar">الخامات</span><span lang="en">Raw materials</span></h3>
+            <p><span lang="ar">بنبدأ بخامات البولي يوريثان (البوليول) المتخزنة في صهاريج ضخمة جوه المصنع.</span><span lang="en">It starts with polyurethane raw materials (polyol) stored in large tanks on site.</span></p>
+          </div>
+        </article>
+        <article class="fstep reveal">
+          <div class="fstep-media"><video data-autoplay src="media/pour-purple.mp4" poster="media/pour-purple.jpg" muted loop playsinline preload="none"></video><span class="real-tag"><span lang="ar">حقيقي</span><span lang="en">Real</span></span></div>
+          <div class="fstep-text">
+            <span class="fstep-num">02</span>
+            <h3><span lang="ar">الخلط والصب</span><span lang="en">Mixing & pouring</span></h3>
+            <p><span lang="ar">ماكينة الصب بتخلط الخامات مع اللون وبتصبها على خط الإنتاج، وهنا بيتحدد لون الإسفنج.</span><span lang="en">The pouring head mixes the materials with color and pours them onto the line. This is where the foam gets its color.</span></p>
+          </div>
+        </article>
+        <article class="fstep reveal">
+          <div class="fstep-media"><img src="media/line.jpg" alt="" loading="lazy"><span class="real-tag"><span lang="ar">حقيقي</span><span lang="en">Real</span></span></div>
+          <div class="fstep-text">
+            <span class="fstep-num">03</span>
+            <h3><span lang="ar">تكوين البلوك</span><span lang="en">Forming the block</span></h3>
+            <p><span lang="ar">الخليط بيتمدد على خط الإنتاج ويتحول لبلوكات إسفنج كبيرة، والأوناش بترفعها وتنقلها.</span><span lang="en">The mix rises along the production line into large foam blocks, which overhead cranes lift and move.</span></p>
+          </div>
+        </article>
+        <article class="fstep reveal">
+          <div class="fstep-media"><video data-autoplay src="media/blocks.mp4" poster="media/blocks.jpg" muted loop playsinline preload="none"></video><span class="real-tag"><span lang="ar">حقيقي</span><span lang="en">Real</span></span></div>
+          <div class="fstep-text">
+            <span class="fstep-num">04</span>
+            <h3><span lang="ar">التخزين والتقطيع</span><span lang="en">Storage & cutting</span></h3>
+            <p><span lang="ar">البلوكات بتترص بألوانها لحد ما تتقطع شيتات ومراتب بالمقاسات المطلوبة.</span><span lang="en">Blocks are stacked by color until they're cut into sheets and mattresses to the required sizes.</span></p>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section swatch-section">
+      <div class="container">
+        <div class="center">
+          <span class="eyebrow"><span lang="ar">ألوان حقيقية</span><span lang="en">Real colors</span></span>
+          <h2 class="section-title reveal"><span lang="ar">ألوان الإسفنج زي ما بتطلع من المصنع</span><span lang="en">Foam colors straight from the factory</span></h2>
+          <p class="section-lead reveal"><span lang="ar">الصور دي متقصوصة من بلوكات حقيقية في مخازننا. المس أي لون.</span><span lang="en">These are cut from real blocks in our yard. Tap any color.</span></p>
+        </div>
+        <div class="swatches">
+          <button type="button" class="swatch reveal"><span class="swatch-foam" style="background-image:url(img/foam/pink.jpg)"></span><span class="swatch-name"><span lang="ar">بمبي</span><span lang="en">Pink</span></span></button>
+          <button type="button" class="swatch reveal"><span class="swatch-foam" style="background-image:url(img/foam/red.jpg)"></span><span class="swatch-name"><span lang="ar">أحمر فوشيا</span><span lang="en">Fuchsia red</span></span></button>
+          <button type="button" class="swatch reveal"><span class="swatch-foam" style="background-image:url(img/foam/magenta.jpg)"></span><span class="swatch-name"><span lang="ar">موف</span><span lang="en">Mauve</span></span></button>
+          <button type="button" class="swatch reveal"><span class="swatch-foam" style="background-image:url(img/foam/blue.jpg)"></span><span class="swatch-name"><span lang="ar">أزرق</span><span lang="en">Blue</span></span></button>
+          <button type="button" class="swatch reveal"><span class="swatch-foam" style="background-image:url(img/foam/orange.jpg)"></span><span class="swatch-name"><span lang="ar">برتقالي</span><span lang="en">Orange</span></span></button>
+          <button type="button" class="swatch reveal"><span class="swatch-foam" style="background-image:url(img/foam/green.jpg)"></span><span class="swatch-name"><span lang="ar">أخضر</span><span lang="en">Green</span></span></button>
+        </div>
+      </div>
+    </section>
 
     <section class="section">
       <div class="container">
