@@ -311,8 +311,8 @@ td:first-child { font-weight: 800; color: var(--red); }
   --pores: radial-gradient(rgba(0, 0, 0, .13) 1.3px, transparent 1.7px);
   --bounce: cubic-bezier(.34, 1.56, .64, 1);
 }
-.logo-img { height: 42px; width: auto; }
-.site-footer .logo-img { background: #fff; padding: 8px 12px; border-radius: 12px; height: 56px; }
+.logo-img { height: 54px; width: auto; }
+.site-footer .logo-img { height: 64px; }
 .site-header { transition: box-shadow .3s; }
 .site-header.scrolled { box-shadow: 0 6px 24px rgba(0, 0, 0, .08); }
 .btn:active { transform: scale(.96); }
@@ -337,7 +337,7 @@ body.intro-on { overflow: hidden; }
   pointer-events: none;
 }
 .intro.ready .intro-card { transform: translate(-50%, -50%) scale(1); }
-.intro-card img { height: 64px; width: auto; margin: 0 auto 10px; }
+.intro-card img { height: 96px; width: auto; margin: 0 auto 10px; }
 .intro-card p { font-weight: 800; color: var(--black); }
 .intro-hint { color: var(--red) !important; font-size: .95rem; margin-top: 6px; animation: hint 1.2s ease-in-out infinite; }
 @keyframes hint { 50% { opacity: .35; } }
@@ -473,7 +473,7 @@ html[dir="rtl"] .marquee-track { animation-name: marquee-rtl; }
   .scene { max-width: 300px; }
   .cube:nth-child(1), .cube:nth-child(2), .cube:nth-child(6) { display: none; }
   .cube { --s: 46px !important; }
-  .logo-img { height: 36px; }
+  .logo-img { height: 46px; }
   .marquee-track { font-size: 1rem; }
 }
 
