@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-title-ar="تواصل معنا | سيتي فوم" data-title-en="Contact Us | City Foam">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تواصل معنا | سيتي فوم</title>
+  <meta name="description" content="سيتي فوم - مصنع مصري لتصنيع الإسفنج والمراتب الطبية ومراتب السوست والمخدات. City Foam - foam and mattress manufacturer in Egypt.">
+  <meta name="theme-color" content="#d71920">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23d71920'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='900' font-size='30' fill='white' text-anchor='middle'%3ECF%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo" aria-label="City Foam"><span class="logo-mark">CF</span><span>CITY <b>FOAM</b></span></a>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html"><span lang="ar">الرئيسية</span><span lang="en">Home</span></a>
+        <a href="products.html"><span lang="ar">المنتجات</span><span lang="en">Products</span></a>
+        <a href="about.html"><span lang="ar">من نحن</span><span lang="en">About Us</span></a>
+        <a href="contact.html" class="active" aria-current="page"><span lang="ar">تواصل معنا</span><span lang="en">Contact</span></a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-btn" type="button">English</button>
+        <button class="menu-btn" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow"><span lang="ar">تواصل معنا</span><span lang="en">Contact Us</span></span>
+        <h1><span lang="ar">يسعدنا نسمع منك</span><span lang="en">We'd love to hear from you</span></h1>
+        <p><span lang="ar">للاستفسارات وعروض الأسعار وطلبات الجملة، ابعتلنا رسالة وهنرد عليك في أقرب وقت.</span><span lang="en">For inquiries, quotes and wholesale orders, send us a message and we'll reply as soon as possible.</span></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <aside class="info-card">
+          <h3><span lang="ar">بيانات التواصل</span><span lang="en">Contact Details</span></h3>
+          <div class="info-item">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></div>
+            <div>
+              <small><span lang="ar">البريد الإلكتروني</span><span lang="en">Email</span></small>
+              <a href="mailto:mohamed.sobhy@cityfoameg.com">mohamed.sobhy@cityfoameg.com</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <small><span lang="ar">الموقع</span><span lang="en">Location</span></small>
+              <span lang="ar">جمهورية مصر العربية</span><span lang="en">Egypt</span>
+            </div>
+          </div>
+        </aside>
+
+        <form class="form" id="contact-form" action="mailto:mohamed.sobhy@cityfoameg.com" method="post" enctype="text/plain">
+          <div class="form-row">
+            <div class="field">
+              <label for="name"><span lang="ar">الاسم</span><span lang="en">Name</span></label>
+              <input id="name" name="name" type="text" required autocomplete="name" data-ph-ar="اسمك بالكامل" data-ph-en="Your full name" placeholder="اسمك بالكامل">
+            </div>
+            <div class="field">
+              <label for="phone"><span lang="ar">رقم الموبايل</span><span lang="en">Phone</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" dir="ltr" placeholder="01xxxxxxxxx">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="email"><span lang="ar">البريد الإلكتروني</span><span lang="en">Email</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" dir="ltr" placeholder="name@example.com">
+            </div>
+            <div class="field">
+              <label for="topic"><span lang="ar">نوع الطلب</span><span lang="en">Topic</span></label>
+              <select id="topic" name="topic">
+                <option value="عرض سعر / Quote">عرض سعر / Quote</option>
+                <option value="طلب جملة / Wholesale">طلب جملة / Wholesale</option>
+                <option value="مقاس خاص / Custom size">مقاس خاص / Custom size</option>
+                <option value="استفسار عام / General">استفسار عام / General</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="message"><span lang="ar">رسالتك</span><span lang="en">Message</span></label>
+            <textarea id="message" name="message" required data-ph-ar="اكتب تفاصيل طلبك: المنتج، المقاس، الكثافة، الكمية..." data-ph-en="Tell us about your request: product, size, density, quantity..." placeholder="اكتب تفاصيل طلبك: المنتج، المقاس، الكثافة، الكمية..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary"><span lang="ar">إرسال الرسالة</span><span lang="en">Send Message</span></button>
+          <p class="form-note"><span lang="ar">عند الضغط على إرسال، هيفتح تطبيق البريد عندك والرسالة جاهزة للإرسال.</span><span lang="en">Clicking send opens your email app with the message ready to go.</span></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo"><span class="logo-mark">CF</span><span>CITY <b>FOAM</b></span></a>
+          <p><span lang="ar">سيتي فوم — مصنع مصري متخصص في تصنيع الإسفنج والمراتب بجودة عالية وأسعار المصنع.</span><span lang="en">City Foam — an Egyptian manufacturer of high-quality foam and mattresses at factory prices.</span></p>
+        </div>
+        <div>
+          <h4><span lang="ar">روابط سريعة</span><span lang="en">Quick Links</span></h4>
+          <ul>
+            <li><a href="index.html"><span lang="ar">الرئيسية</span><span lang="en">Home</span></a></li>
+            <li><a href="products.html"><span lang="ar">المنتجات</span><span lang="en">Products</span></a></li>
+            <li><a href="about.html"><span lang="ar">من نحن</span><span lang="en">About Us</span></a></li>
+            <li><a href="contact.html"><span lang="ar">تواصل معنا</span><span lang="en">Contact</span></a></li>
+          </ul>
+        </div>
+        <div>
+          <h4><span lang="ar">تواصل معنا</span><span lang="en">Get in Touch</span></h4>
+          <ul>
+            <li><a href="mailto:mohamed.sobhy@cityfoameg.com" class="ltr">mohamed.sobhy@cityfoameg.com</a></li>
+            <li><span lang="ar">جمهورية مصر العربية</span><span lang="en">Egypt</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; <span id="year">2026</span> City Foam. <span lang="ar">جميع الحقوق محفوظة.</span><span lang="en">All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
