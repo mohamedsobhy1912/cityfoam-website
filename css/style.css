@@ -297,3 +297,187 @@ td:first-child { font-weight: 800; color: var(--red); }
   .logo { font-size: 1.15rem; }
   .logo-mark { width: 34px; height: 34px; }
 }
+
+/* =========================================================
+   v2 — logo, intro, hero scene, motion
+   ========================================================= */
+:root {
+  --foam-yellow: #f5c842;
+  --foam-blue: #4a90d9;
+  --foam-green: #6cbf6c;
+  --foam-pink: #f28db2;
+  --foam-orange: #f39c4a;
+  --foam-gray: #c9cdd2;
+  --pores: radial-gradient(rgba(0, 0, 0, .13) 1.3px, transparent 1.7px);
+  --bounce: cubic-bezier(.34, 1.56, .64, 1);
+}
+.logo-img { height: 42px; width: auto; }
+.site-footer .logo-img { background: #fff; padding: 8px 12px; border-radius: 12px; height: 56px; }
+.site-header { transition: box-shadow .3s; }
+.site-header.scrolled { box-shadow: 0 6px 24px rgba(0, 0, 0, .08); }
+.btn:active { transform: scale(.96); }
+
+/* ---------- Intro (first visit) ---------- */
+body.intro-on { overflow: hidden; }
+.intro { position: fixed; inset: 0; z-index: 200; overflow: hidden; background: #111; transition: background-color .5s ease .15s; }
+.intro.leaving { background-color: transparent; }
+.intro-wall {
+  position: absolute; inset: 0; display: grid; gap: 6px; padding: 6px;
+}
+.foam-block {
+  border-radius: 12px; background-color: var(--c); background-image: var(--pores); background-size: 9px 9px;
+  box-shadow: inset 0 -7px 0 rgba(0, 0, 0, .14), inset 0 3px 0 rgba(255, 255, 255, .35), 0 6px 14px rgba(0, 0, 0, .18);
+  cursor: pointer; will-change: transform;
+}
+.intro-card {
+  position: absolute; top: 50%; left: 50%; z-index: 2; text-align: center;
+  background: #fff; border-radius: 22px; padding: 26px 34px 22px; width: min(86vw, 380px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, .35);
+  transform: translate(-50%, -50%) scale(0); transition: transform .6s var(--bounce);
+  pointer-events: none;
+}
+.intro.ready .intro-card { transform: translate(-50%, -50%) scale(1); }
+.intro-card img { height: 64px; width: auto; margin: 0 auto 10px; }
+.intro-card p { font-weight: 800; color: var(--black); }
+.intro-hint { color: var(--red) !important; font-size: .95rem; margin-top: 6px; animation: hint 1.2s ease-in-out infinite; }
+@keyframes hint { 50% { opacity: .35; } }
+.intro-skip {
+  position: absolute; z-index: 3; bottom: 18px; inset-inline-end: 18px;
+  background: rgba(17, 17, 17, .85); color: #fff; border: 0; border-radius: 999px; padding: 8px 18px;
+  font-family: inherit; font-weight: 700; cursor: pointer;
+}
+.intro.leaving { pointer-events: none; }
+
+/* ---------- Hero v2 ---------- */
+.hero { padding: 80px 0 90px; }
+.hero::after { display: none; }
+.hero-grid { pointer-events: none; }
+.hero-grid a, .hero-grid button, .hero-grid .scene { pointer-events: auto; }
+.hero h1 em { display: inline-block; animation: wobble 3.2s ease-in-out infinite; transform-origin: 50% 100%; }
+@keyframes wobble { 0%, 80%, 100% { transform: none; } 85% { transform: scale(1.08, .9); } 90% { transform: scale(.95, 1.06); } 95% { transform: scale(1.02, .98); } }
+
+.cubes { position: absolute; inset: 0; z-index: 0; }
+.cube {
+  position: absolute; top: var(--y); inset-inline-start: var(--x); width: var(--s); height: calc(var(--s) * .62);
+  background-color: var(--c); background-image: var(--pores); background-size: 8px 8px; border-radius: 12px;
+  box-shadow: inset 0 -6px 0 rgba(0, 0, 0, .16), inset 0 2px 0 rgba(255, 255, 255, .35), 0 14px 26px rgba(0, 0, 0, .4);
+  transform: rotate(var(--r)); animation: float var(--d) ease-in-out infinite alternate; cursor: pointer; opacity: .95;
+}
+@keyframes float { to { transform: translateY(-20px) rotate(calc(var(--r) + 8deg)); } }
+.cube.pop { animation: pop .8s cubic-bezier(.5, 0, .75, 0) forwards; }
+@keyframes pop {
+  0% { transform: rotate(var(--r)); }
+  20% { transform: rotate(var(--r)) scale(1.3, .6); }
+  40% { transform: rotate(var(--r)) scale(.85, 1.2); }
+  100% { transform: translateY(-110vh) rotate(calc(var(--r) + 260deg)) scale(.7); opacity: 0; }
+}
+.cube.respawn { animation: respawn .7s var(--bounce); }
+@keyframes respawn { from { transform: rotate(var(--r)) scale(0); } }
+
+.scene { position: relative; cursor: pointer; max-width: 440px; width: 100%; margin-inline: auto; -webkit-tap-highlight-color: transparent; }
+.scene:focus-visible { outline: 3px solid var(--red); outline-offset: 6px; border-radius: 20px; }
+.scene svg { width: 100%; height: auto; overflow: visible; }
+.scene-hint { text-align: center; color: #bdbdbd; font-size: .9rem; margin-top: 4px; }
+.scene-hint b { color: #fff; }
+
+/* SVG parts */
+.mattress { transform-box: view-box; transform-origin: 200px 374px; animation: squash 1.3s infinite; }
+.jumper { transform-box: view-box; transform-origin: 200px 252px; animation: jump 1.3s infinite; }
+.jumper-spin { transform-box: view-box; transform-origin: 200px 195px; }
+.jump-shadow { transform-box: fill-box; transform-origin: 50% 50%; animation: jshadow 1.3s infinite; }
+.arm-l { transform-box: view-box; transform-origin: 186px 170px; animation: arml 1.3s infinite; }
+.arm-r { transform-box: view-box; transform-origin: 214px 170px; animation: armr 1.3s infinite; }
+
+@keyframes jump {
+  0% { transform: translateY(18px) scaleY(.9); animation-timing-function: ease-out; }
+  14% { transform: translateY(0) scaleY(1.05); animation-timing-function: cubic-bezier(.2, .7, .4, 1); }
+  50% { transform: translateY(-130px) scaleY(1); animation-timing-function: cubic-bezier(.6, 0, .8, .3); }
+  86% { transform: translateY(0) scaleY(1.03); animation-timing-function: ease-out; }
+  100% { transform: translateY(18px) scaleY(.9); }
+}
+@keyframes squash {
+  0% { transform: scale(1.03, .85); animation-timing-function: ease-out; }
+  14% { transform: scale(.99, 1.04); animation-timing-function: ease-in-out; }
+  24%, 86% { transform: none; animation-timing-function: ease-in; }
+  100% { transform: scale(1.03, .85); }
+}
+@keyframes jshadow {
+  0%, 100% { transform: translateY(18px) scale(1.1); opacity: .45; }
+  14%, 86% { transform: none; opacity: .4; }
+  50% { transform: scale(.45); opacity: .12; }
+}
+@keyframes arml { 0%, 100% { transform: rotate(20deg); } 50% { transform: rotate(150deg); } 86% { transform: rotate(70deg); } }
+@keyframes armr { 0%, 100% { transform: rotate(-20deg); } 50% { transform: rotate(-150deg); } 86% { transform: rotate(-70deg); } }
+
+/* Big jump with a flip (on click) — separate names so all parts restart together */
+.scene.big .mattress { animation: squash-b 1.7s 1; }
+.scene.big .jumper { animation: jump-b 1.7s 1; }
+.scene.big .jumper-spin { animation: spin 1.7s 1; }
+.scene.big .jump-shadow { animation: jshadow-b 1.7s 1; }
+.scene.big .arm-l { animation: arml-b 1.7s 1; }
+.scene.big .arm-r { animation: armr-b 1.7s 1; }
+@keyframes jump-b {
+  0% { transform: translateY(30px) scaleY(.82); animation-timing-function: ease-out; }
+  12% { transform: translateY(0) scaleY(1.08); animation-timing-function: cubic-bezier(.2, .7, .4, 1); }
+  50% { transform: translateY(-235px) scaleY(1); animation-timing-function: cubic-bezier(.6, 0, .8, .3); }
+  88% { transform: translateY(0) scaleY(1.03); animation-timing-function: ease-out; }
+  100% { transform: translateY(18px) scaleY(.9); }
+}
+@keyframes squash-b {
+  0% { transform: scale(1.06, .75); animation-timing-function: ease-out; }
+  12% { transform: scale(.98, 1.07); animation-timing-function: ease-in-out; }
+  22%, 88% { transform: none; animation-timing-function: ease-in; }
+  100% { transform: scale(1.03, .85); }
+}
+@keyframes spin { 0%, 20% { transform: none; } 75%, 100% { transform: rotate(360deg); } }
+@keyframes jshadow-b {
+  0% { transform: translateY(30px) scale(1.2); opacity: .5; }
+  12%, 88% { transform: none; opacity: .4; }
+  50% { transform: scale(.3); opacity: .08; }
+  100% { transform: translateY(18px) scale(1.1); opacity: .45; }
+}
+@keyframes arml-b { 0%, 100% { transform: rotate(20deg); } 30%, 70% { transform: rotate(160deg); } 88% { transform: rotate(70deg); } }
+@keyframes armr-b { 0%, 100% { transform: rotate(-20deg); } 30%, 70% { transform: rotate(-160deg); } 88% { transform: rotate(-70deg); } }
+
+/* ---------- Marquee ---------- */
+.marquee { background: var(--red); color: #fff; overflow: hidden; padding: 16px 0; }
+.marquee-track { display: flex; width: max-content; gap: 34px; align-items: center; animation: marquee 28s linear infinite; font-weight: 800; font-size: 1.15rem; white-space: nowrap; }
+html[dir="rtl"] .marquee-track { animation-name: marquee-rtl; }
+.marquee-track i { width: 10px; height: 10px; border-radius: 3px; background: #fff; transform: rotate(45deg); flex: none; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@keyframes marquee-rtl { to { transform: translateX(50%); } }
+
+/* ---------- Product foam colors + squish ---------- */
+.product-visual .shape { background-color: var(--foam, #fff); transition: transform .5s var(--bounce); }
+.grid > .product:nth-child(6n+1) .shape { --foam: var(--foam-yellow); }
+.grid > .product:nth-child(6n+2) .shape { --foam: var(--foam-blue); }
+.grid > .product:nth-child(6n+3) .shape { --foam: var(--foam-pink); }
+.grid > .product:nth-child(6n+4) .shape { --foam: var(--foam-green); }
+.grid > .product:nth-child(6n+5) .shape { --foam: var(--foam-orange); }
+.grid > .product:nth-child(6n+6) .shape { --foam: var(--foam-gray); }
+.product:hover .shape, .product:active .shape { transform: scale(1.06, .82); }
+.card .icon { transition: transform .5s var(--bounce); }
+.card:hover .icon { transform: scale(1.12) rotate(-6deg); }
+
+/* ---------- Scroll reveal ---------- */
+.js .reveal { opacity: 0; transform: translateY(30px); transition: opacity .7s ease, transform .7s cubic-bezier(.2, .8, .2, 1); }
+.js .reveal.in { opacity: 1; transform: none; }
+.js .card.reveal.in:hover { transform: translateY(-6px); }
+
+@media (max-width: 980px) {
+  .hero-art, .scene { max-width: 380px; }
+}
+@media (max-width: 600px) {
+  .hero { padding: 48px 0 56px; }
+  .hero-grid { gap: 28px; }
+  .scene { max-width: 300px; }
+  .cube:nth-child(1), .cube:nth-child(2), .cube:nth-child(6) { display: none; }
+  .cube { --s: 46px !important; }
+  .logo-img { height: 36px; }
+  .marquee-track { font-size: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}

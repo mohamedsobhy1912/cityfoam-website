@@ -16,7 +16,7 @@
 <body>
   <header class="site-header">
     <div class="container nav">
-      <a href="index.html" class="logo" aria-label="City Foam"><span class="logo-mark">CF</span><span>CITY <b>FOAM</b></span></a>
+      <a href="index.html" class="logo"><img src="img/logo.svg" alt="City Foam" class="logo-img"></a>
       <nav class="nav-links" id="nav-links">
         <a href="index.html" class="active" aria-current="page"><span lang="ar">الرئيسية</span><span lang="en">Home</span></a>
         <a href="products.html"><span lang="ar">المنتجات</span><span lang="en">Products</span></a>
@@ -31,7 +31,25 @@
   </header>
 
   <main>
+    <div class="intro" id="intro" hidden role="dialog" aria-label="City Foam">
+      <div class="intro-wall"></div>
+      <div class="intro-card">
+        <img src="img/logo.svg" alt="City Foam">
+        <p><span lang="ar">إسفنج • مراتب • راحة</span><span lang="en">Foam • Mattresses • Comfort</span></p>
+        <p class="intro-hint"><span lang="ar">اضغط على الإسفنج للدخول</span><span lang="en">Tap the foam to enter</span></p>
+      </div>
+      <button class="intro-skip" type="button"><span lang="ar">تخطي</span><span lang="en">Skip</span></button>
+    </div>
+
     <section class="hero">
+      <div class="cubes" aria-hidden="true">
+        <span class="cube" style="--x:4%;--y:12%;--s:86px;--c:#f5c842;--r:-14deg;--d:3.4s"></span>
+        <span class="cube" style="--x:44%;--y:6%;--s:58px;--c:#4a90d9;--r:12deg;--d:2.8s"></span>
+        <span class="cube" style="--x:88%;--y:78%;--s:70px;--c:#f28db2;--r:18deg;--d:3.8s"></span>
+        <span class="cube" style="--x:38%;--y:86%;--s:64px;--c:#6cbf6c;--r:-8deg;--d:3.1s"></span>
+        <span class="cube" style="--x:2%;--y:70%;--s:54px;--c:#f39c4a;--r:22deg;--d:2.6s"></span>
+        <span class="cube" style="--x:90%;--y:8%;--s:48px;--c:#c9cdd2;--r:-20deg;--d:3.6s"></span>
+      </div>
       <div class="container hero-grid">
         <div>
           <span class="eyebrow"><span lang="ar">صناعة مصرية بجودة عالمية</span><span lang="en">Egyptian made, world-class quality</span></span>
@@ -42,39 +60,75 @@
             <a href="contact.html" class="btn btn-outline"><span lang="ar">تواصل معنا</span><span lang="en">Contact Us</span></a>
           </div>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="layer"></div>
-          <div class="layer red"></div>
-          <div class="layer"></div>
-          <div class="layer dark"></div>
+        <div>
+          <div class="scene" role="button" tabindex="0" aria-label="Jump">
+            <svg viewBox="0 0 400 400" aria-hidden="true">
+              <defs>
+                <pattern id="pores" width="9" height="9" patternUnits="userSpaceOnUse">
+                  <circle cx="4.5" cy="4.5" r="1.4" fill="rgba(0,0,0,.14)"/>
+                </pattern>
+              </defs>
+              <ellipse cx="200" cy="386" rx="175" ry="10" fill="rgba(0,0,0,.45)"/>
+              <g class="mattress">
+                <rect x="30" y="330" width="340" height="44" rx="14" fill="#4a90d9"/>
+                <rect x="30" y="330" width="340" height="44" rx="14" fill="url(#pores)"/>
+                <rect x="30" y="292" width="340" height="44" rx="14" fill="#f5c842"/>
+                <rect x="30" y="292" width="340" height="44" rx="14" fill="url(#pores)"/>
+                <rect x="30" y="252" width="340" height="46" rx="16" fill="#d71920"/>
+                <rect x="30" y="252" width="340" height="46" rx="16" fill="url(#pores)"/>
+                <path d="M50 275 H350" stroke="rgba(255,255,255,.4)" stroke-width="2" stroke-dasharray="7 7"/>
+                <rect x="30" y="252" width="340" height="8" rx="4" fill="rgba(255,255,255,.18)"/>
+              </g>
+              <ellipse class="jump-shadow" cx="200" cy="254" rx="42" ry="6" fill="rgba(0,0,0,.4)"/>
+              <g class="jumper">
+                <g class="jumper-spin">
+                  <g stroke="#fff" stroke-width="11" stroke-linecap="round" fill="none">
+                    <path d="M191 250 L193 212"/>
+                    <path d="M209 250 L207 212"/>
+                    <path class="arm-l" d="M186 170 L178 208"/>
+                    <path class="arm-r" d="M214 170 L222 208"/>
+                  </g>
+                  <rect x="181" y="156" width="38" height="62" rx="17" fill="#fff"/>
+                  <rect x="181" y="186" width="38" height="9" fill="#d71920"/>
+                  <circle cx="200" cy="134" r="18" fill="#fff"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <p class="scene-hint"><span lang="ar"><b>اضغط على المرتبة</b> وشوف النطّة</span><span lang="en"><b>Tap the mattress</b> for a big jump</span></p>
         </div>
       </div>
     </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" lang="ar"><span>إسفنج ألواح</span><i></i><span>مراتب طبية</span><i></i><span>سوست بوكت</span><i></i><span>سوست بونيل</span><i></i><span>إسفنج أثاث</span><i></i><span>مخدات فايبر</span><i></i><span>تقطيع حسب الطلب</span><i></i><span>توصيل لكل مصر</span><i></i><span>إسفنج ألواح</span><i></i><span>مراتب طبية</span><i></i><span>سوست بوكت</span><i></i><span>سوست بونيل</span><i></i><span>إسفنج أثاث</span><i></i><span>مخدات فايبر</span><i></i><span>تقطيع حسب الطلب</span><i></i><span>توصيل لكل مصر</span><i></i></div>
+      <div class="marquee-track" lang="en"><span>Foam Sheets</span><i></i><span>Medical Mattresses</span><i></i><span>Pocket Springs</span><i></i><span>Bonnell Springs</span><i></i><span>Furniture Foam</span><i></i><span>Fiber Pillows</span><i></i><span>Custom Cutting</span><i></i><span>Nationwide Delivery</span><i></i><span>Foam Sheets</span><i></i><span>Medical Mattresses</span><i></i><span>Pocket Springs</span><i></i><span>Bonnell Springs</span><i></i><span>Furniture Foam</span><i></i><span>Fiber Pillows</span><i></i><span>Custom Cutting</span><i></i><span>Nationwide Delivery</span><i></i></div>
+    </div>
 
     <section class="section">
       <div class="container">
         <div class="center">
           <span class="eyebrow"><span lang="ar">ليه سيتي فوم؟</span><span lang="en">Why City Foam?</span></span>
-          <h2 class="section-title"><span lang="ar">جودة تقدر تعتمد عليها</span><span lang="en">Quality you can rely on</span></h2>
-          <p class="section-lead"><span lang="ar">من اختيار الخامات لحد التوصيل، بنهتم بكل تفصيلة عشان توصلك منتجات تستاهل ثقتك.</span><span lang="en">From raw materials to delivery, we care about every detail to bring you products worthy of your trust.</span></p>
+          <h2 class="section-title reveal"><span lang="ar">جودة تقدر تعتمد عليها</span><span lang="en">Quality you can rely on</span></h2>
+          <p class="section-lead reveal"><span lang="ar">من اختيار الخامات لحد التوصيل، بنهتم بكل تفصيلة عشان توصلك منتجات تستاهل ثقتك.</span><span lang="en">From raw materials to delivery, we care about every detail to bring you products worthy of your trust.</span></p>
         </div>
         <div class="grid grid-4">
-          <div class="card">
+          <div class="card reveal">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
             <h3><span lang="ar">خامات عالية الجودة</span><span lang="en">Premium Materials</span></h3>
             <p><span lang="ar">نستخدم أفضل الخامات لضمان متانة وراحة تدوم لسنين.</span><span lang="en">We use top-grade raw materials for comfort and durability that last for years.</span></p>
           </div>
-          <div class="card">
+          <div class="card reveal">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 10 5-10 5L2 7l10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg></div>
             <h3><span lang="ar">كثافات متعددة</span><span lang="en">Multiple Densities</span></h3>
             <p><span lang="ar">تشكيلة واسعة من الكثافات تناسب كل الاستخدامات.</span><span lang="en">A wide range of densities to suit every use.</span></p>
           </div>
-          <div class="card">
+          <div class="card reveal">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
             <h3><span lang="ar">تقطيع حسب الطلب</span><span lang="en">Custom Cutting</span></h3>
             <p><span lang="ar">نقطع الإسفنج بأي مقاس أو شكل تحتاجه.</span><span lang="en">We cut foam to any size or shape you need.</span></p>
           </div>
-          <div class="card">
+          <div class="card reveal">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
             <h3><span lang="ar">توصيل لكل المحافظات</span><span lang="en">Nationwide Delivery</span></h3>
             <p><span lang="ar">نوصل طلبك لأي مكان في مصر.</span><span lang="en">We deliver your order anywhere in Egypt.</span></p>
@@ -86,24 +140,24 @@
     <section class="section section-soft">
       <div class="container">
         <span class="eyebrow"><span lang="ar">منتجاتنا</span><span lang="en">Our Products</span></span>
-        <h2 class="section-title"><span lang="ar">كل اللي تحتاجه للنوم والأثاث</span><span lang="en">Everything you need for sleep and furniture</span></h2>
-        <p class="section-lead"><span lang="ar">تشكيلة متكاملة من الإسفنج والمراتب والمخدات بمقاسات وكثافات متنوعة.</span><span lang="en">A complete range of foam, mattresses and pillows in many sizes and densities.</span></p>
+        <h2 class="section-title reveal"><span lang="ar">كل اللي تحتاجه للنوم والأثاث</span><span lang="en">Everything you need for sleep and furniture</span></h2>
+        <p class="section-lead reveal"><span lang="ar">تشكيلة متكاملة من الإسفنج والمراتب والمخدات بمقاسات وكثافات متنوعة.</span><span lang="en">A complete range of foam, mattresses and pillows in many sizes and densities.</span></p>
         <div class="grid grid-3">
-          <a href="products.html" class="card product">
+          <a href="products.html" class="card reveal product">
             <div class="product-visual "><div class="shape"></div></div>
             <div class="product-body">
               <h3><span lang="ar">إسفنج ألواح</span><span lang="en">Foam Sheets</span></h3>
               <p><span lang="ar">ألواح إسفنج بكثافات وسُمك مختلفة للمراتب والأثاث.</span><span lang="en">Foam sheets in various densities and thicknesses for mattresses and furniture.</span></p>
             </div>
           </a>
-          <a href="products.html" class="card product">
+          <a href="products.html" class="card reveal product">
             <div class="product-visual v-red"><div class="shape"></div></div>
             <div class="product-body">
               <h3><span lang="ar">مراتب طبية</span><span lang="en">Medical Mattresses</span></h3>
               <p><span lang="ar">دعم مثالي للعمود الفقري ونوم مريح طول الليل.</span><span lang="en">Ideal spinal support for a comfortable night's sleep.</span></p>
             </div>
           </a>
-          <a href="products.html" class="card product">
+          <a href="products.html" class="card reveal product">
             <div class="product-visual v-dark"><div class="shape"></div></div>
             <div class="product-body">
               <h3><span lang="ar">مراتب سوست</span><span lang="en">Spring Mattresses</span></h3>
@@ -121,20 +175,20 @@
       <div class="container">
         <div class="center">
           <span class="eyebrow"><span lang="ar">بنخدم مين؟</span><span lang="en">Who we serve</span></span>
-          <h2 class="section-title"><span lang="ar">حلول لكل احتياج</span><span lang="en">Solutions for every need</span></h2>
+          <h2 class="section-title reveal"><span lang="ar">حلول لكل احتياج</span><span lang="en">Solutions for every need</span></h2>
         </div>
         <div class="grid grid-4" style="margin-top:30px">
-          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div><h3><span lang="ar">المنازل</span><span lang="en">Homes</span></h3><p><span lang="ar">مراتب ومخدات لراحة كل أفراد الأسرة.</span><span lang="en">Mattresses and pillows for the whole family.</span></p></div>
-          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div><h3><span lang="ar">الفنادق</span><span lang="en">Hotels</span></h3><p><span lang="ar">مراتب متينة بمواصفات فندقية.</span><span lang="en">Durable hotel-grade mattresses.</span></p></div>
-          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 10 5-10 5L2 7l10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg></div><h3><span lang="ar">مصانع الأثاث</span><span lang="en">Furniture Makers</span></h3><p><span lang="ar">إسفنج للأنتريهات والكنب والكراسي.</span><span lang="en">Foam for sofas, couches and chairs.</span></p></div>
-          <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3><span lang="ar">التجار والموزعين</span><span lang="en">Dealers & Distributors</span></h3><p><span lang="ar">أسعار جملة وكميات كبيرة.</span><span lang="en">Wholesale prices and bulk quantities.</span></p></div>
+          <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div><h3><span lang="ar">المنازل</span><span lang="en">Homes</span></h3><p><span lang="ar">مراتب ومخدات لراحة كل أفراد الأسرة.</span><span lang="en">Mattresses and pillows for the whole family.</span></p></div>
+          <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div><h3><span lang="ar">الفنادق</span><span lang="en">Hotels</span></h3><p><span lang="ar">مراتب متينة بمواصفات فندقية.</span><span lang="en">Durable hotel-grade mattresses.</span></p></div>
+          <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 10 5-10 5L2 7l10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg></div><h3><span lang="ar">مصانع الأثاث</span><span lang="en">Furniture Makers</span></h3><p><span lang="ar">إسفنج للأنتريهات والكنب والكراسي.</span><span lang="en">Foam for sofas, couches and chairs.</span></p></div>
+          <div class="card reveal"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3><span lang="ar">التجار والموزعين</span><span lang="en">Dealers & Distributors</span></h3><p><span lang="ar">أسعار جملة وكميات كبيرة.</span><span lang="en">Wholesale prices and bulk quantities.</span></p></div>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="cta">
+        <div class="cta reveal">
           <div>
             <h2><span lang="ar">محتاج مقاس أو كثافة مخصوصة؟</span><span lang="en">Need a custom size or density?</span></h2>
             <p><span lang="ar">ابعتلنا طلبك وفريقنا هيرد عليك بعرض سعر في أسرع وقت.</span><span lang="en">Send us your request and our team will get back to you with a quote.</span></p>
@@ -149,7 +203,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a href="index.html" class="logo"><span class="logo-mark">CF</span><span>CITY <b>FOAM</b></span></a>
+          <a href="index.html" class="logo"><img src="img/logo.svg" alt="City Foam" class="logo-img"></a>
           <p><span lang="ar">سيتي فوم — مصنع مصري متخصص في تصنيع الإسفنج والمراتب بجودة عالية وأسعار المصنع.</span><span lang="en">City Foam — an Egyptian manufacturer of high-quality foam and mattresses at factory prices.</span></p>
         </div>
         <div>
@@ -166,6 +220,7 @@
           <ul>
             <li><a href="mailto:mohamed.sobhy@cityfoameg.com" class="ltr">mohamed.sobhy@cityfoameg.com</a></li>
             <li><span lang="ar">جمهورية مصر العربية</span><span lang="en">Egypt</span></li>
+            <li><a href="index.html?intro"><span lang="ar">شاهد المقدمة تاني</span><span lang="en">Replay intro</span></a></li>
           </ul>
         </div>
       </div>
