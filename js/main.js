@@ -123,7 +123,7 @@
       });
     }, { threshold: 0.25 });
     vids.forEach(function (v) { io.observe(v); });
-    var hero = document.querySelector('.hero-video');
+    var hero = document.querySelector('.cine-video');
     if (hero) { var hp = hero.play(); if (hp && hp.catch) hp.catch(function () {}); }
   }
 
