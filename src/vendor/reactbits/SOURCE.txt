@@ -1,0 +1,2 @@
+Components copied unmodified from React Bits (https://github.com/DavidHDev/react-bits), src/content/*, at commit:
+4dc7b5b7772e1217c8fb8d2a7aa074302180e5b4 2026-10-31

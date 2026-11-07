@@ -1,0 +1,33 @@
+<g class="sc s2">
+<linearGradient id="S2-liq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a2fa3"/><stop offset=".5" stop-color="#5c1a70"/><stop offset="1" stop-color="#2e0b3a"/></linearGradient>
+<linearGradient id="S2-stream" x1="0" x2="1"><stop offset="0" stop-color="#4a1259"/><stop offset=".45" stop-color="#b65fd0"/><stop offset="1" stop-color="#4a1259"/></linearGradient>
+<clipPath id="S2-clip"><rect x="0" y="334" width="400" height="18"/></clipPath>
+<rect x="0" y="292" width="400" height="44" fill="#d8c9ad" opacity=".9"/>
+<rect x="0" y="292" width="400" height="44" fill="url(#SC-shade)"/>
+<rect x="0" y="334" width="400" height="18" fill="url(#S2-liq)"/>
+<g clip-path="url(#S2-clip)"><g class="s2-sheen" fill="#fff" opacity=".45">
+  <rect x="-120" y="338" width="46" height="2" rx="1"/><rect x="-60" y="344" width="30" height="1.5" rx="1"/><rect x="0" y="338" width="46" height="2" rx="1"/><rect x="60" y="344" width="30" height="1.5" rx="1"/><rect x="120" y="338" width="46" height="2" rx="1"/><rect x="180" y="344" width="30" height="1.5" rx="1"/><rect x="240" y="338" width="46" height="2" rx="1"/><rect x="300" y="344" width="30" height="1.5" rx="1"/><rect x="360" y="338" width="46" height="2" rx="1"/>
+</g></g>
+<rect x="0" y="352" width="400" height="10" fill="#45494f"/>
+<rect x="0" y="362" width="400" height="34" fill="#2a2d32"/>
+<g fill="#1d1f23"><rect x="30" y="396" width="10" height="34"/><rect x="190" y="396" width="10" height="34"/><rect x="360" y="396" width="10" height="34"/></g>
+<rect x="14" y="62" width="16" height="368" fill="url(#SC-beam)"/><rect x="370" y="62" width="16" height="368" fill="url(#SC-beam)"/>
+<rect x="6" y="56" width="388" height="28" rx="2" fill="url(#SC-beam)"/>
+<rect x="6" y="56" width="388" height="4" fill="#d71920"/>
+<g class="s2-head">
+  <path d="M96 104 C 96 70, 60 64, 34 60" fill="none" stroke="#1b1d20" stroke-width="6"/>
+  <path d="M106 104 C 106 66, 70 60, 40 52" fill="none" stroke="#2c5a8c" stroke-width="5"/>
+  <rect x="68" y="84" width="64" height="18" rx="3" fill="#6c737b"/>
+  <rect x="80" y="102" width="40" height="74" rx="7" fill="url(#SC-steel)"/>
+  <rect x="120" y="110" width="28" height="34" rx="4" fill="#9aa1a8"/><rect x="124" y="116" width="20" height="3" fill="#5d636a"/><rect x="124" y="124" width="20" height="3" fill="#5d636a"/><rect x="124" y="132" width="20" height="3" fill="#5d636a"/>
+  <rect x="52" y="110" width="26" height="38" rx="3" fill="#17191c" stroke="#3a3e44"/>
+  <circle class="s2-led" cx="60" cy="120" r="3" fill="#3ddc84"/><circle class="s2-led s2-led-b" cx="70" cy="120" r="3" fill="#d71920"/>
+  <rect x="57" y="130" width="16" height="10" rx="1" fill="#0e3a2a"/>
+  <rect x="84" y="176" width="32" height="12" rx="2" fill="#b58a3a"/>
+  <rect x="95" y="188" width="10" height="30" fill="#8d939a"/>
+  <path d="M93 218 H107 L103 228 H97 Z" fill="#6c737b"/>
+  <rect class="s2-stream" x="98" y="228" width="4" height="110" fill="url(#S2-stream)"/>
+  <ellipse class="s2-pool" cx="100" cy="338" rx="30" ry="6" fill="#9a43b5" opacity=".95"/>
+  <ellipse cx="100" cy="337" rx="12" ry="2" fill="#fff" opacity=".35"/>
+</g>
+</g>

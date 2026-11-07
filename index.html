@@ -1,388 +1,46 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl" data-title-ar="سيتي فوم | تصنيع الإسفنج والمراتب في مصر" data-title-en="City Foam | Foam & Mattress Manufacturer in Egypt">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>سيتي فوم | تصنيع الإسفنج والمراتب في مصر</title>
-  <meta name="description" content="سيتي فوم - مصنع مصري لتصنيع الإسفنج والمراتب الطبية ومراتب السوست والمخدات. City Foam - foam and mattress manufacturer in Egypt.">
-  <meta name="theme-color" content="#d71920">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23d71920'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='900' font-size='30' fill='white' text-anchor='middle'%3ECF%3C/text%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js"></script>
-</head>
-<body>
-  <header class="site-header">
-    <div class="container nav">
-      <a href="index.html" class="logo"><img src="img/logo.png" alt="City Foam" class="logo-img"></a>
-      <nav class="nav-links" id="nav-links">
-        <a href="index.html" class="active" aria-current="page"><span lang="ar">الرئيسية</span><span lang="en">Home</span></a>
-        <a href="products.html"><span lang="ar">المنتجات</span><span lang="en">Products</span></a>
-        <a href="about.html"><span lang="ar">من نحن</span><span lang="en">About Us</span></a>
-        <a href="contact.html"><span lang="ar">تواصل معنا</span><span lang="en">Contact</span></a>
-      </nav>
-      <div class="nav-actions">
-        <button class="lang-btn" type="button">English</button>
-        <button class="menu-btn" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false"><span></span></button>
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>سيتي فوم | City Foam — تصنيع الإسفنج البولي يوريثان المرن منذ 2008</title>
+    <meta name="description" content="سيتي فوم (City Foam) — شركة مصرية لتصنيع الإسفنج البولي يوريثان المرن والمراتب منذ 2008. بلوكات إسفنج، شيتات وتقطيع حسب الطلب، ومراتب. Egyptian flexible polyurethane foam and mattress manufacturer since 2008." />
+    <meta name="theme-color" content="#0b0b0c" />
+    <link rel="icon" type="image/png" href="./img/logo.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="City Foam — Engineering comfort. Powering industry." />
+    <meta property="og:description" content="Egyptian flexible polyurethane foam and mattress manufacturer since 2008." />
+    <meta property="og:image" content="./media/hero-yard.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="./media/hero-yard.jpg" media="(min-aspect-ratio: 4/5)" />
+    <link rel="preload" as="image" href="./media/hero-yard-portrait.jpg" media="(max-aspect-ratio: 4/5)" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "City Foam",
+        "alternateName": "سيتي فوم",
+        "description": "Flexible polyurethane foam and mattress manufacturer in Egypt.",
+        "foundingDate": "2008",
+        "email": "mohamed.sobhy@cityfoameg.com",
+        "address": { "@type": "PostalAddress", "addressCountry": "EG" },
+        "logo": "./img/logo.png"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">تخطي إلى المحتوى</a>
+    <div id="root"></div>
+    <noscript>
+      <div style="padding:40px;font-family:sans-serif;text-align:center">
+        <h1>City Foam — سيتي فوم</h1>
+        <p>Flexible polyurethane foam and mattress manufacturer, Egypt, since 2008.</p>
+        <p><a href="mailto:mohamed.sobhy@cityfoameg.com">mohamed.sobhy@cityfoameg.com</a></p>
       </div>
-    </div>
-  </header>
-
-  <main>
-    <div class="intro" id="intro" hidden role="dialog" aria-label="City Foam">
-      <div class="intro-wall"></div>
-      <div class="intro-card">
-        <img src="img/logo.png" alt="City Foam">
-        <p><span lang="ar">إسفنج • مراتب • راحة</span><span lang="en">Foam • Mattresses • Comfort</span></p>
-        <p class="intro-hint"><span lang="ar">اضغط على الإسفنج للدخول</span><span lang="en">Tap the foam to enter</span></p>
-      </div>
-      <button class="intro-skip" type="button"><span lang="ar">تخطي</span><span lang="en">Skip</span></button>
-    </div>
-
-    <section class="hero cine">
-      <video class="cine-video" src="media/hero-sleep.mp4" poster="media/hero-sleep.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
-      <div class="cine-shade" aria-hidden="true"></div>
-      <div class="container cine-content">
-        <span class="eyebrow"><span lang="ar">سيتي فوم — صناعة مصرية</span><span lang="en">City Foam — made in Egypt</span></span>
-        <h1><span lang="ar">نوم أعمق<br>يبدأ من <em>إسفنج أحسن</em></span><span lang="en">Deeper sleep<br>starts with <em>better foam</em></span></h1>
-        <p><span lang="ar">بنصنّع الإسفنج والمراتب والمخدات للبيوت والفنادق ومصانع الأثاث في كل مصر، من الخامة لحد باب بيتك.</span><span lang="en">We make foam, mattresses and pillows for homes, hotels and furniture makers across Egypt, from raw material to your door.</span></p>
-        <div class="hero-actions">
-          <a href="products.html" class="btn btn-primary"><span lang="ar">اكتشف المنتجات</span><span lang="en">Explore Products</span></a>
-          <a href="#factory" class="btn btn-outline"><span lang="ar">جوه المصنع</span><span lang="en">Inside the factory</span></a>
-        </div>
-      </div>
-      <a href="#factory" class="scroll-cue" aria-label="Scroll"><span></span></a>
-    </section>
-
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track" lang="ar"><span>إسفنج ألواح</span><i></i><span>مراتب طبية</span><i></i><span>سوست بوكت</span><i></i><span>سوست بونيل</span><i></i><span>إسفنج أثاث</span><i></i><span>مخدات فايبر</span><i></i><span>تقطيع حسب الطلب</span><i></i><span>توصيل لكل مصر</span><i></i><span>إسفنج ألواح</span><i></i><span>مراتب طبية</span><i></i><span>سوست بوكت</span><i></i><span>سوست بونيل</span><i></i><span>إسفنج أثاث</span><i></i><span>مخدات فايبر</span><i></i><span>تقطيع حسب الطلب</span><i></i><span>توصيل لكل مصر</span><i></i></div>
-      <div class="marquee-track" lang="en"><span>Foam Sheets</span><i></i><span>Medical Mattresses</span><i></i><span>Pocket Springs</span><i></i><span>Bonnell Springs</span><i></i><span>Furniture Foam</span><i></i><span>Fiber Pillows</span><i></i><span>Custom Cutting</span><i></i><span>Nationwide Delivery</span><i></i><span>Foam Sheets</span><i></i><span>Medical Mattresses</span><i></i><span>Pocket Springs</span><i></i><span>Bonnell Springs</span><i></i><span>Furniture Foam</span><i></i><span>Fiber Pillows</span><i></i><span>Custom Cutting</span><i></i><span>Nationwide Delivery</span><i></i></div>
-    </div>
-
-    <section class="section section-dark factory" id="factory">
-      <div class="container">
-        <div class="center">
-          <span class="eyebrow"><span lang="ar">جوه المصنع</span><span lang="en">Inside the factory</span></span>
-          <h2 class="section-title reveal"><span lang="ar">رحلة الإسفنج من الخامة للبلوك</span><span lang="en">How foam is made, from raw material to block</span></h2>
-          <p class="section-lead reveal"><span lang="ar">خطوط إنتاج سيتي فوم، خطوة بخطوة.</span><span lang="en">City Foam production, step by step.</span></p>
-        </div>
-        <svg class="scene-defs" aria-hidden="true"><defs><linearGradient id="SC-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d1e22"/><stop offset="1" stop-color="#0d0d0f"/></linearGradient>
-<radialGradient id="SC-glow" cx=".5" cy=".28" r=".75"><stop offset="0" stop-color="#d71920" stop-opacity=".22"/><stop offset="1" stop-color="#d71920" stop-opacity="0"/></radialGradient>
-<linearGradient id="SC-steel" x1="0" x2="1"><stop offset="0" stop-color="#3a3f45"/><stop offset=".2" stop-color="#8d939a"/><stop offset=".4" stop-color="#e6e9ec"/><stop offset=".58" stop-color="#a7adb4"/><stop offset="1" stop-color="#363b41"/></linearGradient>
-<linearGradient id="SC-beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9aa1a8"/><stop offset=".5" stop-color="#5d636a"/><stop offset="1" stop-color="#3b4046"/></linearGradient>
-<linearGradient id="SC-shade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".18"/><stop offset=".4" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".35"/></linearGradient>
-<pattern id="SC-pink" patternUnits="userSpaceOnUse" width="420" height="420"><image href="img/foam/pink.jpg" width="420" height="420" preserveAspectRatio="xMidYMid slice"/></pattern>
-<pattern id="SC-blue" patternUnits="userSpaceOnUse" width="200" height="200"><image href="img/foam/blue.jpg" width="200" height="200" preserveAspectRatio="xMidYMid slice"/></pattern>
-<pattern id="SC-orange" patternUnits="userSpaceOnUse" width="200" height="200"><image href="img/foam/orange.jpg" width="200" height="200" preserveAspectRatio="xMidYMid slice"/></pattern>
-<pattern id="SC-green" patternUnits="userSpaceOnUse" width="200" height="200"><image href="img/foam/green.jpg" width="200" height="200" preserveAspectRatio="xMidYMid slice"/></pattern>
-<pattern id="SC-magenta" patternUnits="userSpaceOnUse" width="200" height="200"><image href="img/foam/magenta.jpg" width="200" height="200" preserveAspectRatio="xMidYMid slice"/></pattern>
-
-<filter id="SC-blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
-</defs></svg>
-        <div class="fsteps">
-        <article class="fstep reveal">
-          <div class="fstep-media drawn"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="500" fill="url(#SC-bg)"/>
-<rect width="400" height="500" fill="url(#SC-glow)"/>
-<rect y="430" width="400" height="70" fill="#121214"/>
-<g stroke="#202125" stroke-width="1"><line x1="0" y1="430" x2="400" y2="430" stroke="#2c2d31"/><line x1="200" y1="430" x2="-60" y2="500"/><line x1="200" y1="430" x2="60" y2="500"/><line x1="200" y1="430" x2="200" y2="500"/><line x1="200" y1="430" x2="340" y2="500"/><line x1="200" y1="430" x2="460" y2="500"/><line x1="0" y1="455" x2="400" y2="455"/><line x1="0" y1="482" x2="400" y2="482"/></g>
-<g class="sc s1">
-<rect x="18" y="92" width="364" height="6" fill="#2b2e33"/>
-<g stroke="#3a3e44" stroke-width="2"><line x1="22" y1="70" x2="22" y2="92"/><line x1="120" y1="70" x2="120" y2="92"/><line x1="200" y1="70" x2="200" y2="92"/><line x1="280" y1="70" x2="280" y2="92"/><line x1="378" y1="70" x2="378" y2="92"/><line x1="18" y1="72" x2="382" y2="72"/></g>
-<g>
-  <rect x="52" y="405" width="8" height="25" fill="#2b2e33"/><rect x="150" y="405" width="8" height="25" fill="#2b2e33"/>
-  <rect x="40" y="120" width="130" height="290" fill="url(#SC-steel)"/>
-  <ellipse cx="105" cy="410" rx="65" ry="13" fill="#2f3439"/>
-  <rect x="40" y="200" width="130" height="3" fill="#000" opacity=".25"/><rect x="40" y="320" width="130" height="3" fill="#000" opacity=".25"/>
-  <ellipse cx="105" cy="120" rx="65" ry="13" fill="#d3d7db"/><ellipse cx="105" cy="120" rx="65" ry="13" fill="none" stroke="#7f858c"/>
-  <text x="100" y="272" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="23" fill="#1f2a5c" letter-spacing="1">POLYOL</text>
-  <rect x="150" y="146" width="9" height="236" rx="4.5" fill="#1a1d21" stroke="#6c737b"/>
-  <rect class="s1-level" x="152" y="210" width="5" height="170" rx="2.5" fill="#e0a23a"/>
-  <circle cx="74" cy="166" r="14" fill="#f3f3f3" stroke="#2a2d31" stroke-width="3"/>
-  <path d="M64 166 A10 10 0 0 1 84 166" fill="none" stroke="#d71920" stroke-width="2"/>
-  <line class="s1-needle" x1="74" y1="166" x2="74" y2="157" stroke="#111" stroke-width="2" stroke-linecap="round"/>
-</g>
-<g>
-  <rect x="242" y="405" width="8" height="25" fill="#2b2e33"/><rect x="340" y="405" width="8" height="25" fill="#2b2e33"/>
-  <rect x="230" y="150" width="130" height="260" fill="url(#SC-steel)"/>
-  <ellipse cx="295" cy="410" rx="65" ry="13" fill="#2f3439"/>
-  <rect x="230" y="240" width="130" height="3" fill="#000" opacity=".25"/><rect x="230" y="330" width="130" height="3" fill="#000" opacity=".25"/>
-  <ellipse cx="295" cy="150" rx="65" ry="13" fill="#d3d7db"/><ellipse cx="295" cy="150" rx="65" ry="13" fill="none" stroke="#7f858c"/>
-  <text x="290" y="296" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="23" fill="#1f2a5c" letter-spacing="1">ISO</text>
-  <g stroke="#2a2d31" stroke-width="2"><line x1="344" y1="150" x2="344" y2="410"/><line x1="356" y1="150" x2="356" y2="410"/><line x1="344" y1="180" x2="356" y2="180"/><line x1="344" y1="210" x2="356" y2="210"/><line x1="344" y1="240" x2="356" y2="240"/><line x1="344" y1="270" x2="356" y2="270"/><line x1="344" y1="300" x2="356" y2="300"/><line x1="344" y1="330" x2="356" y2="330"/><line x1="344" y1="360" x2="356" y2="360"/><line x1="344" y1="390" x2="356" y2="390"/></g>
-  <rect x="236" y="176" width="9" height="206" rx="4.5" fill="#1a1d21" stroke="#6c737b"/>
-  <rect class="s1-level s1-level-b" x="238" y="240" width="5" height="140" rx="2.5" fill="#cbbf98"/>
-</g>
-<path d="M105 423 V452 H410" fill="none" stroke="#575d64" stroke-width="12" stroke-linejoin="round"/>
-<path class="s1-flow" d="M105 423 V452 H410" fill="none" stroke="#e0a23a" stroke-width="4" stroke-dasharray="10 14" stroke-linejoin="round"/>
-<path d="M295 423 V472 H410" fill="none" stroke="#575d64" stroke-width="12" stroke-linejoin="round"/>
-<path class="s1-flow s1-flow-b" d="M295 423 V472 H410" fill="none" stroke="#cbbf98" stroke-width="4" stroke-dasharray="10 14" stroke-linejoin="round"/>
-<g class="s1-valve"><circle cx="160" cy="452" r="10" fill="none" stroke="#d71920" stroke-width="3.5"/><path d="M150 452 H170 M160 442 V462" stroke="#d71920" stroke-width="2.5"/></g>
-<g class="s1-valve s1-valve-b"><circle cx="330" cy="472" r="10" fill="none" stroke="#d71920" stroke-width="3.5"/><path d="M320 472 H340 M330 462 V482" stroke="#d71920" stroke-width="2.5"/></g>
-<circle class="s1-led" cx="388" cy="44" r="4" fill="#3ddc84"/>
-</g>
-</svg></div>
-          <div class="fstep-text">
-            <span class="fstep-num">01</span>
-            <h3><span lang="ar">الخامات</span><span lang="en">Raw materials</span></h3>
-            <p><span lang="ar">بنبدأ بخامات البولي يوريثان (البوليول) المتخزنة في صهاريج ضخمة جوه المصنع.</span><span lang="en">It starts with polyurethane raw materials (polyol) stored in large tanks on site.</span></p>
-          </div>
-        </article>
-        <article class="fstep reveal">
-          <div class="fstep-media drawn"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="500" fill="url(#SC-bg)"/>
-<rect width="400" height="500" fill="url(#SC-glow)"/>
-<rect y="430" width="400" height="70" fill="#121214"/>
-<g stroke="#202125" stroke-width="1"><line x1="0" y1="430" x2="400" y2="430" stroke="#2c2d31"/><line x1="200" y1="430" x2="-60" y2="500"/><line x1="200" y1="430" x2="60" y2="500"/><line x1="200" y1="430" x2="200" y2="500"/><line x1="200" y1="430" x2="340" y2="500"/><line x1="200" y1="430" x2="460" y2="500"/><line x1="0" y1="455" x2="400" y2="455"/><line x1="0" y1="482" x2="400" y2="482"/></g>
-<g class="sc s2">
-<linearGradient id="S2-liq" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a2fa3"/><stop offset=".5" stop-color="#5c1a70"/><stop offset="1" stop-color="#2e0b3a"/></linearGradient>
-<linearGradient id="S2-stream" x1="0" x2="1"><stop offset="0" stop-color="#4a1259"/><stop offset=".45" stop-color="#b65fd0"/><stop offset="1" stop-color="#4a1259"/></linearGradient>
-<clipPath id="S2-clip"><rect x="0" y="334" width="400" height="18"/></clipPath>
-<rect x="0" y="292" width="400" height="44" fill="#d8c9ad" opacity=".9"/>
-<rect x="0" y="292" width="400" height="44" fill="url(#SC-shade)"/>
-<rect x="0" y="334" width="400" height="18" fill="url(#S2-liq)"/>
-<g clip-path="url(#S2-clip)"><g class="s2-sheen" fill="#fff" opacity=".45">
-  <rect x="-120" y="338" width="46" height="2" rx="1"/><rect x="-60" y="344" width="30" height="1.5" rx="1"/><rect x="0" y="338" width="46" height="2" rx="1"/><rect x="60" y="344" width="30" height="1.5" rx="1"/><rect x="120" y="338" width="46" height="2" rx="1"/><rect x="180" y="344" width="30" height="1.5" rx="1"/><rect x="240" y="338" width="46" height="2" rx="1"/><rect x="300" y="344" width="30" height="1.5" rx="1"/><rect x="360" y="338" width="46" height="2" rx="1"/>
-</g></g>
-<rect x="0" y="352" width="400" height="10" fill="#45494f"/>
-<rect x="0" y="362" width="400" height="34" fill="#2a2d32"/>
-<g fill="#1d1f23"><rect x="30" y="396" width="10" height="34"/><rect x="190" y="396" width="10" height="34"/><rect x="360" y="396" width="10" height="34"/></g>
-<rect x="14" y="62" width="16" height="368" fill="url(#SC-beam)"/><rect x="370" y="62" width="16" height="368" fill="url(#SC-beam)"/>
-<rect x="6" y="56" width="388" height="28" rx="2" fill="url(#SC-beam)"/>
-<rect x="6" y="56" width="388" height="4" fill="#d71920"/>
-<g class="s2-head">
-  <path d="M96 104 C 96 70, 60 64, 34 60" fill="none" stroke="#1b1d20" stroke-width="6"/>
-  <path d="M106 104 C 106 66, 70 60, 40 52" fill="none" stroke="#2c5a8c" stroke-width="5"/>
-  <rect x="68" y="84" width="64" height="18" rx="3" fill="#6c737b"/>
-  <rect x="80" y="102" width="40" height="74" rx="7" fill="url(#SC-steel)"/>
-  <rect x="120" y="110" width="28" height="34" rx="4" fill="#9aa1a8"/><rect x="124" y="116" width="20" height="3" fill="#5d636a"/><rect x="124" y="124" width="20" height="3" fill="#5d636a"/><rect x="124" y="132" width="20" height="3" fill="#5d636a"/>
-  <rect x="52" y="110" width="26" height="38" rx="3" fill="#17191c" stroke="#3a3e44"/>
-  <circle class="s2-led" cx="60" cy="120" r="3" fill="#3ddc84"/><circle class="s2-led s2-led-b" cx="70" cy="120" r="3" fill="#d71920"/>
-  <rect x="57" y="130" width="16" height="10" rx="1" fill="#0e3a2a"/>
-  <rect x="84" y="176" width="32" height="12" rx="2" fill="#b58a3a"/>
-  <rect x="95" y="188" width="10" height="30" fill="#8d939a"/>
-  <path d="M93 218 H107 L103 228 H97 Z" fill="#6c737b"/>
-  <rect class="s2-stream" x="98" y="228" width="4" height="110" fill="url(#S2-stream)"/>
-  <ellipse class="s2-pool" cx="100" cy="338" rx="30" ry="6" fill="#9a43b5" opacity=".95"/>
-  <ellipse cx="100" cy="337" rx="12" ry="2" fill="#fff" opacity=".35"/>
-</g>
-</g>
-</svg><span class="tech-tag"><span lang="ar">تكنولوجيا ألمانية — Hennecke</span><span lang="en">German technology — Hennecke</span></span></div>
-          <div class="fstep-text">
-            <span class="fstep-num">02</span>
-            <h3><span lang="ar">الخلط والصب</span><span lang="en">Mixing & pouring</span></h3>
-            <p><span lang="ar">ماكينة صب ألمانية من Hennecke بتخلط الخامات مع اللون بنسب دقيقة وبتصبها على خط الإنتاج، وهنا بيتحدد لون الإسفنج وكثافته.</span><span lang="en">Our German Hennecke foaming machine meters and mixes the materials with color and pours them onto the line. This is where the foam gets its color and density.</span></p>
-          </div>
-        </article>
-        <article class="fstep reveal">
-          <div class="fstep-media drawn"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="500" fill="url(#SC-bg)"/>
-<rect width="400" height="500" fill="url(#SC-glow)"/>
-<rect y="430" width="400" height="70" fill="#121214"/>
-<g stroke="#202125" stroke-width="1"><line x1="0" y1="430" x2="400" y2="430" stroke="#2c2d31"/><line x1="200" y1="430" x2="-60" y2="500"/><line x1="200" y1="430" x2="60" y2="500"/><line x1="200" y1="430" x2="200" y2="500"/><line x1="200" y1="430" x2="340" y2="500"/><line x1="200" y1="430" x2="460" y2="500"/><line x1="0" y1="455" x2="400" y2="455"/><line x1="0" y1="482" x2="400" y2="482"/></g>
-<g class="sc s3">
-<clipPath id="S3-block"><rect x="268" y="150" width="140" height="250"/></clipPath>
-<rect x="250" y="64" width="12" height="366" fill="url(#SC-beam)"/><rect x="384" y="64" width="12" height="366" fill="url(#SC-beam)"/>
-<rect x="240" y="58" width="166" height="20" fill="url(#SC-beam)"/><rect x="240" y="58" width="166" height="3" fill="#d71920"/>
-<g class="s3-hoist"><rect x="306" y="78" width="40" height="22" rx="4" fill="#3c8a6e"/><line x1="326" y1="100" x2="326" y2="170" stroke="#9aa1a8" stroke-width="2"/><path d="M320 170 h12 v8 a6 6 0 1 1 -12 0 z" fill="#e0b72f"/></g>
-<path d="M0 392 L0 383 C 80 383, 120 380, 165 334 C 200 296, 228 238, 272 228 L400 228 L400 392 Z" fill="url(#SC-pink)"/>
-<path d="M0 392 L0 383 C 80 383, 120 380, 165 334 C 200 296, 228 238, 272 228 L400 228 L400 392 Z" fill="url(#SC-shade)"/>
-<path d="M0 383 C 80 383, 120 380, 165 334 C 200 296, 228 238, 272 228 L400 228" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"/>
-<path d="M0 392 L0 383 C 50 383, 80 382, 110 376 L 110 392 Z" fill="#7d2a93" opacity=".85"/>
-<g clip-path="url(#S3-block)"><g class="s3-cuts" stroke="#fff" stroke-opacity=".5" stroke-width="1.5" stroke-dasharray="4 5"><line x1="240" y1="228" x2="240" y2="392"/><line x1="320" y1="228" x2="320" y2="392"/><line x1="400" y1="228" x2="400" y2="392"/><line x1="480" y1="228" x2="480" y2="392"/></g></g>
-<g fill="#fff"><circle class="s3-bub" cx="140" cy="362" r="3"/><circle class="s3-bub b2" cx="170" cy="335" r="2.5"/><circle class="s3-bub b3" cx="195" cy="300" r="3.5"/><circle class="s3-bub b4" cx="215" cy="268" r="2"/><circle class="s3-bub b5" cx="155" cy="350" r="2"/><circle class="s3-bub b6" cx="235" cy="246" r="3"/></g>
-<g fill="#fff" class="s3-vapor" filter="url(#SC-blur)"><ellipse cx="170" cy="300" rx="26" ry="10" opacity=".5"/><ellipse class="v2" cx="210" cy="250" rx="30" ry="11" opacity=".45"/><ellipse class="v3" cx="135" cy="345" rx="22" ry="8" opacity=".5"/></g>
-<rect x="0" y="392" width="400" height="10" fill="#45494f"/>
-<g class="s3-rollers" fill="#2a2d32" stroke="#6c737b" stroke-width="2">
-<g class="s3-roll"><circle cx="20" cy="414" r="10"/><line x1="10" y1="414" x2="30" y2="414"/></g><g class="s3-roll"><circle cx="60" cy="414" r="10"/><line x1="50" y1="414" x2="70" y2="414"/></g><g class="s3-roll"><circle cx="100" cy="414" r="10"/><line x1="90" y1="414" x2="110" y2="414"/></g><g class="s3-roll"><circle cx="140" cy="414" r="10"/><line x1="130" y1="414" x2="150" y2="414"/></g><g class="s3-roll"><circle cx="180" cy="414" r="10"/><line x1="170" y1="414" x2="190" y2="414"/></g><g class="s3-roll"><circle cx="220" cy="414" r="10"/><line x1="210" y1="414" x2="230" y2="414"/></g><g class="s3-roll"><circle cx="260" cy="414" r="10"/><line x1="250" y1="414" x2="270" y2="414"/></g><g class="s3-roll"><circle cx="300" cy="414" r="10"/><line x1="290" y1="414" x2="310" y2="414"/></g><g class="s3-roll"><circle cx="340" cy="414" r="10"/><line x1="330" y1="414" x2="350" y2="414"/></g><g class="s3-roll"><circle cx="380" cy="414" r="10"/><line x1="370" y1="414" x2="390" y2="414"/></g>
-</g>
-</g>
-</svg></div>
-          <div class="fstep-text">
-            <span class="fstep-num">03</span>
-            <h3><span lang="ar">تكوين البلوك</span><span lang="en">Forming the block</span></h3>
-            <p><span lang="ar">الخليط بيتمدد على خط الإنتاج ويتحول لبلوكات إسفنج كبيرة، والأوناش بترفعها وتنقلها.</span><span lang="en">The mix rises along the production line into large foam blocks, which overhead cranes lift and move.</span></p>
-          </div>
-        </article>
-        <article class="fstep reveal">
-          <div class="fstep-media drawn"><svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="500" fill="url(#SC-bg)"/>
-<rect width="400" height="500" fill="url(#SC-glow)"/>
-<rect y="430" width="400" height="70" fill="#121214"/>
-<g stroke="#202125" stroke-width="1"><line x1="0" y1="430" x2="400" y2="430" stroke="#2c2d31"/><line x1="200" y1="430" x2="-60" y2="500"/><line x1="200" y1="430" x2="60" y2="500"/><line x1="200" y1="430" x2="200" y2="500"/><line x1="200" y1="430" x2="340" y2="500"/><line x1="200" y1="430" x2="460" y2="500"/><line x1="0" y1="455" x2="400" y2="455"/><line x1="0" y1="482" x2="400" y2="482"/></g>
-<g class="sc s4">
-<rect x="14" y="398" width="372" height="12" fill="#45494f"/><g fill="#1d1f23"><rect x="30" y="410" width="10" height="20"/><rect x="360" y="410" width="10" height="20"/></g>
-<rect x="40" y="250" width="150" height="148" fill="url(#SC-blue)"/>
-<rect x="40" y="250" width="150" height="148" fill="url(#SC-shade)"/>
-<g stroke="#000" stroke-opacity=".18"><line x1="40" y1="268" x2="190" y2="268"/><line x1="40" y1="286" x2="190" y2="286"/><line x1="40" y1="304" x2="190" y2="304"/><line x1="40" y1="322" x2="190" y2="322"/><line x1="40" y1="340" x2="190" y2="340"/><line x1="40" y1="358" x2="190" y2="358"/><line x1="40" y1="376" x2="190" y2="376"/></g>
-<g>
-<rect x="240" y="380" width="140" height="18" fill="url(#SC-green)"/><rect x="240" y="380" width="140" height="18" fill="url(#SC-shade)"/>
-<rect x="240" y="362" width="140" height="18" fill="url(#SC-orange)"/><rect x="240" y="362" width="140" height="18" fill="url(#SC-shade)"/>
-<rect x="240" y="344" width="140" height="18" fill="url(#SC-magenta)"/><rect x="240" y="344" width="140" height="18" fill="url(#SC-shade)"/>
-</g>
-<g class="s4-sheet s4-k0"><rect x="40" y="232" width="150" height="18" fill="url(#SC-pink)"/><rect x="40" y="232" width="150" height="18" fill="url(#SC-shade)"/></g>
-<g class="s4-sheet s4-k1"><rect x="40" y="232" width="150" height="18" fill="url(#SC-orange)"/><rect x="40" y="232" width="150" height="18" fill="url(#SC-shade)"/></g>
-<g class="s4-sheet s4-k2"><rect x="40" y="232" width="150" height="18" fill="url(#SC-green)"/><rect x="40" y="232" width="150" height="18" fill="url(#SC-shade)"/></g>
-<g class="s4-sheet s4-k3"><rect x="40" y="232" width="150" height="18" fill="url(#SC-blue)"/><rect x="40" y="232" width="150" height="18" fill="url(#SC-shade)"/></g>
-<rect x="26" y="150" width="14" height="250" fill="url(#SC-beam)"/><rect x="190" y="150" width="14" height="250" fill="url(#SC-beam)"/>
-<rect x="18" y="140" width="194" height="20" fill="url(#SC-beam)"/><rect x="18" y="140" width="194" height="3" fill="#d71920"/>
-<rect x="24" y="242" width="18" height="16" rx="2" fill="#6c737b"/><rect x="188" y="242" width="18" height="16" rx="2" fill="#6c737b"/>
-<line x1="40" y1="250" x2="190" y2="250" stroke="#e9ecef" stroke-width="2.5"/>
-<line class="s4-band" x1="40" y1="250" x2="190" y2="250" stroke="#7f858c" stroke-width="2.5" stroke-dasharray="3 5"/>
-<rect class="s4-glow" x="40" y="246" width="150" height="8" fill="#fff" opacity=".12"/>
-<rect x="208" y="170" width="30" height="44" rx="3" fill="#17191c" stroke="#3a3e44"/><rect x="213" y="176" width="20" height="12" rx="1" fill="#0e3a2a"/><circle class="s2-led" cx="217" cy="200" r="3" fill="#3ddc84"/><circle class="s2-led s2-led-b" cx="229" cy="200" r="3" fill="#d71920"/>
-</g>
-</svg></div>
-          <div class="fstep-text">
-            <span class="fstep-num">04</span>
-            <h3><span lang="ar">التقطيع لشيتات</span><span lang="en">Storage & cutting</span></h3>
-            <p><span lang="ar">بعد ما البلوك يستوي، ماكينة التقطيع بتشرّحه شيتات بالسُمك المطلوب، وبعدها بتتجهز للمراتب والأثاث.</span><span lang="en">Once cured, the block goes through the cutting machine and is sliced into sheets of the required thickness, ready for mattresses and furniture.</span></p>
-          </div>
-        </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section swatch-section">
-      <div class="container">
-        <div class="center">
-          <span class="eyebrow"><span lang="ar">ألوان حقيقية</span><span lang="en">Real colors</span></span>
-          <h2 class="section-title reveal"><span lang="ar">ألوان الإسفنج زي ما بتطلع من المصنع</span><span lang="en">Foam colors straight from the factory</span></h2>
-          <p class="section-lead reveal"><span lang="ar">الصور دي متقصوصة من بلوكات حقيقية في مخازننا. المس أي لون.</span><span lang="en">These are cut from real blocks in our yard. Tap any color.</span></p>
-        </div>
-        <div class="swatches">
-          <button type="button" class="swatch reveal"><span class="swatch-foam" style="background-image:url(img/foam/pink.jpg)"></span><span class="swatch-name"><span lang="ar">بمبي</span><span lang="en">Pink</span></span></button>
-          <button type="button" class="swatch reveal"><span class="swatch-foam" style="background-image:url(img/foam/red.jpg)"></span><span class="swatch-name"><span lang="ar">أحمر فوشيا</span><span lang="en">Fuchsia red</span></span></button>
-          <button type="button" class="swatch reveal"><span class="swatch-foam" style="background-image:url(img/foam/magenta.jpg)"></span><span class="swatch-name"><span lang="ar">موف</span><span lang="en">Mauve</span></span></button>
-          <button type="button" class="swatch reveal"><span class="swatch-foam" style="background-image:url(img/foam/blue.jpg)"></span><span class="swatch-name"><span lang="ar">أزرق</span><span lang="en">Blue</span></span></button>
-          <button type="button" class="swatch reveal"><span class="swatch-foam" style="background-image:url(img/foam/orange.jpg)"></span><span class="swatch-name"><span lang="ar">برتقالي</span><span lang="en">Orange</span></span></button>
-          <button type="button" class="swatch reveal"><span class="swatch-foam" style="background-image:url(img/foam/green.jpg)"></span><span class="swatch-name"><span lang="ar">أخضر</span><span lang="en">Green</span></span></button>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="center">
-          <span class="eyebrow"><span lang="ar">ليه سيتي فوم؟</span><span lang="en">Why City Foam?</span></span>
-          <h2 class="section-title reveal"><span lang="ar">جودة تقدر تعتمد عليها</span><span lang="en">Quality you can rely on</span></h2>
-          <p class="section-lead reveal"><span lang="ar">من اختيار الخامات لحد التوصيل، بنهتم بكل تفصيلة عشان توصلك منتجات تستاهل ثقتك.</span><span lang="en">From raw materials to delivery, we care about every detail to bring you products worthy of your trust.</span></p>
-        </div>
-        <div class="grid grid-4">
-          <div class="card reveal">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
-            <h3><span lang="ar">خامات عالية الجودة</span><span lang="en">Premium Materials</span></h3>
-            <p><span lang="ar">نستخدم أفضل الخامات لضمان متانة وراحة تدوم لسنين.</span><span lang="en">We use top-grade raw materials for comfort and durability that last for years.</span></p>
-          </div>
-          <div class="card reveal">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 10 5-10 5L2 7l10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg></div>
-            <h3><span lang="ar">كثافات متعددة</span><span lang="en">Multiple Densities</span></h3>
-            <p><span lang="ar">تشكيلة واسعة من الكثافات تناسب كل الاستخدامات.</span><span lang="en">A wide range of densities to suit every use.</span></p>
-          </div>
-          <div class="card reveal">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
-            <h3><span lang="ar">تقطيع حسب الطلب</span><span lang="en">Custom Cutting</span></h3>
-            <p><span lang="ar">نقطع الإسفنج بأي مقاس أو شكل تحتاجه.</span><span lang="en">We cut foam to any size or shape you need.</span></p>
-          </div>
-          <div class="card reveal">
-            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-            <h3><span lang="ar">توصيل لكل المحافظات</span><span lang="en">Nationwide Delivery</span></h3>
-            <p><span lang="ar">نوصل طلبك لأي مكان في مصر.</span><span lang="en">We deliver your order anywhere in Egypt.</span></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft">
-      <div class="container">
-        <span class="eyebrow"><span lang="ar">منتجاتنا</span><span lang="en">Our Products</span></span>
-        <h2 class="section-title reveal"><span lang="ar">كل اللي تحتاجه للنوم والأثاث</span><span lang="en">Everything you need for sleep and furniture</span></h2>
-        <p class="section-lead reveal"><span lang="ar">تشكيلة متكاملة من الإسفنج والمراتب والمخدات بمقاسات وكثافات متنوعة.</span><span lang="en">A complete range of foam, mattresses and pillows in many sizes and densities.</span></p>
-        <div class="grid grid-3">
-          <a href="products.html" class="card reveal product">
-            <div class="product-visual "><div class="shape"></div></div>
-            <div class="product-body">
-              <h3><span lang="ar">إسفنج ألواح</span><span lang="en">Foam Sheets</span></h3>
-              <p><span lang="ar">ألواح إسفنج بكثافات وسُمك مختلفة للمراتب والأثاث.</span><span lang="en">Foam sheets in various densities and thicknesses for mattresses and furniture.</span></p>
-            </div>
-          </a>
-          <a href="products.html" class="card reveal product">
-            <div class="product-visual v-red"><div class="shape"></div></div>
-            <div class="product-body">
-              <h3><span lang="ar">مراتب طبية</span><span lang="en">Medical Mattresses</span></h3>
-              <p><span lang="ar">دعم مثالي للعمود الفقري ونوم مريح طول الليل.</span><span lang="en">Ideal spinal support for a comfortable night's sleep.</span></p>
-            </div>
-          </a>
-          <a href="products.html" class="card reveal product">
-            <div class="product-visual v-dark"><div class="shape"></div></div>
-            <div class="product-body">
-              <h3><span lang="ar">مراتب سوست</span><span lang="en">Spring Mattresses</span></h3>
-              <p><span lang="ar">سوست بونيل وبوكت مع طبقات إسفنج مريحة.</span><span lang="en">Bonnell and pocket springs with comfort foam layers.</span></p>
-            </div>
-          </a>
-        </div>
-        <div class="center" style="margin-top:36px">
-          <a href="products.html" class="btn btn-primary"><span lang="ar">كل المنتجات</span><span lang="en">All Products</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="center">
-          <span class="eyebrow"><span lang="ar">بنخدم مين؟</span><span lang="en">Who we serve</span></span>
-          <h2 class="section-title reveal"><span lang="ar">حلول لكل احتياج</span><span lang="en">Solutions for every need</span></h2>
-        </div>
-        <div class="tiles">
-          <a href="products.html" class="tile reveal"><video data-autoplay src="media/homes.mp4" poster="media/homes.jpg" muted loop playsinline preload="none"></video><div class="tile-text"><h3><span lang="ar">البيوت</span><span lang="en">Homes</span></h3><p><span lang="ar">مراتب ومخدات لراحة كل أفراد الأسرة.</span><span lang="en">Mattresses and pillows for the whole family.</span></p></div></a>
-          <a href="products.html" class="tile reveal"><video data-autoplay src="media/hotels.mp4" poster="media/hotels.jpg" muted loop playsinline preload="none"></video><div class="tile-text"><h3><span lang="ar">الفنادق</span><span lang="en">Hotels</span></h3><p><span lang="ar">مراتب متينة بمواصفات فندقية.</span><span lang="en">Durable hotel-grade mattresses.</span></p></div></a>
-          <a href="products.html" class="tile reveal"><img src="media/blocks.jpg" alt="" loading="lazy"><div class="tile-text"><h3><span lang="ar">مصانع الأثاث</span><span lang="en">Furniture Makers</span></h3><p><span lang="ar">بلوكات وشيتات إسفنج للأنتريهات والكنب.</span><span lang="en">Foam blocks and sheets for sofas and seating.</span></p></div></a>
-          <a href="contact.html" class="tile reveal"><img src="media/line.jpg" alt="" loading="lazy"><div class="tile-text"><h3><span lang="ar">التجار والموزعين</span><span lang="en">Dealers & Distributors</span></h3><p><span lang="ar">أسعار جملة وكميات كبيرة.</span><span lang="en">Wholesale prices and bulk quantities.</span></p></div></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="cta reveal">
-          <video data-autoplay class="cta-video" src="media/red-fabric.mp4" poster="media/red-fabric.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
-          <div>
-            <h2><span lang="ar">محتاج مقاس أو كثافة مخصوصة؟</span><span lang="en">Need a custom size or density?</span></h2>
-            <p><span lang="ar">ابعتلنا طلبك وفريقنا هيرد عليك بعرض سعر في أسرع وقت.</span><span lang="en">Send us your request and our team will get back to you with a quote.</span></p>
-          </div>
-          <a href="contact.html" class="btn btn-dark"><span lang="ar">اطلب عرض سعر</span><span lang="en">Request a Quote</span></a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <a href="index.html" class="logo"><img src="img/logo-white.png" alt="City Foam" class="logo-img"></a>
-          <p><span lang="ar">سيتي فوم — مصنع مصري متخصص في تصنيع الإسفنج والمراتب بجودة عالية وأسعار المصنع.</span><span lang="en">City Foam — an Egyptian manufacturer of high-quality foam and mattresses at factory prices.</span></p>
-        </div>
-        <div>
-          <h4><span lang="ar">روابط سريعة</span><span lang="en">Quick Links</span></h4>
-          <ul>
-            <li><a href="index.html"><span lang="ar">الرئيسية</span><span lang="en">Home</span></a></li>
-            <li><a href="products.html"><span lang="ar">المنتجات</span><span lang="en">Products</span></a></li>
-            <li><a href="about.html"><span lang="ar">من نحن</span><span lang="en">About Us</span></a></li>
-            <li><a href="contact.html"><span lang="ar">تواصل معنا</span><span lang="en">Contact</span></a></li>
-          </ul>
-        </div>
-        <div>
-          <h4><span lang="ar">تواصل معنا</span><span lang="en">Get in Touch</span></h4>
-          <ul>
-            <li><a href="mailto:mohamed.sobhy@cityfoameg.com" class="ltr">mohamed.sobhy@cityfoameg.com</a></li>
-            <li><span lang="ar">جمهورية مصر العربية</span><span lang="en">Egypt</span></li>
-            <li><a href="index.html?intro"><span lang="ar">شاهد المقدمة تاني</span><span lang="en">Replay intro</span></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        &copy; <span id="year">2026</span> City Foam. <span lang="ar">جميع الحقوق محفوظة.</span><span lang="en">All rights reserved.</span>
-      </div>
-    </div>
-  </footer>
-</body>
+    </noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

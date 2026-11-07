@@ -1,0 +1,17 @@
+<g class="sc s3">
+<clipPath id="S3-block"><rect x="268" y="150" width="140" height="250"/></clipPath>
+<rect x="250" y="64" width="12" height="366" fill="url(#SC-beam)"/><rect x="384" y="64" width="12" height="366" fill="url(#SC-beam)"/>
+<rect x="240" y="58" width="166" height="20" fill="url(#SC-beam)"/><rect x="240" y="58" width="166" height="3" fill="#d71920"/>
+<g class="s3-hoist"><rect x="306" y="78" width="40" height="22" rx="4" fill="#3c8a6e"/><line x1="326" y1="100" x2="326" y2="170" stroke="#9aa1a8" stroke-width="2"/><path d="M320 170 h12 v8 a6 6 0 1 1 -12 0 z" fill="#e0b72f"/></g>
+<path d="M0 392 L0 383 C 80 383, 120 380, 165 334 C 200 296, 228 238, 272 228 L400 228 L400 392 Z" fill="url(#SC-pink)"/>
+<path d="M0 392 L0 383 C 80 383, 120 380, 165 334 C 200 296, 228 238, 272 228 L400 228 L400 392 Z" fill="url(#SC-shade)"/>
+<path d="M0 383 C 80 383, 120 380, 165 334 C 200 296, 228 238, 272 228 L400 228" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"/>
+<path d="M0 392 L0 383 C 50 383, 80 382, 110 376 L 110 392 Z" fill="#7d2a93" opacity=".85"/>
+<g clip-path="url(#S3-block)"><g class="s3-cuts" stroke="#fff" stroke-opacity=".5" stroke-width="1.5" stroke-dasharray="4 5"><line x1="240" y1="228" x2="240" y2="392"/><line x1="320" y1="228" x2="320" y2="392"/><line x1="400" y1="228" x2="400" y2="392"/><line x1="480" y1="228" x2="480" y2="392"/></g></g>
+<g fill="#fff"><circle class="s3-bub" cx="140" cy="362" r="3"/><circle class="s3-bub b2" cx="170" cy="335" r="2.5"/><circle class="s3-bub b3" cx="195" cy="300" r="3.5"/><circle class="s3-bub b4" cx="215" cy="268" r="2"/><circle class="s3-bub b5" cx="155" cy="350" r="2"/><circle class="s3-bub b6" cx="235" cy="246" r="3"/></g>
+<g fill="#fff" class="s3-vapor" filter="url(#SC-blur)"><ellipse cx="170" cy="300" rx="26" ry="10" opacity=".5"/><ellipse class="v2" cx="210" cy="250" rx="30" ry="11" opacity=".45"/><ellipse class="v3" cx="135" cy="345" rx="22" ry="8" opacity=".5"/></g>
+<rect x="0" y="392" width="400" height="10" fill="#45494f"/>
+<g class="s3-rollers" fill="#2a2d32" stroke="#6c737b" stroke-width="2">
+<g class="s3-roll"><circle cx="20" cy="414" r="10"/><line x1="10" y1="414" x2="30" y2="414"/></g><g class="s3-roll"><circle cx="60" cy="414" r="10"/><line x1="50" y1="414" x2="70" y2="414"/></g><g class="s3-roll"><circle cx="100" cy="414" r="10"/><line x1="90" y1="414" x2="110" y2="414"/></g><g class="s3-roll"><circle cx="140" cy="414" r="10"/><line x1="130" y1="414" x2="150" y2="414"/></g><g class="s3-roll"><circle cx="180" cy="414" r="10"/><line x1="170" y1="414" x2="190" y2="414"/></g><g class="s3-roll"><circle cx="220" cy="414" r="10"/><line x1="210" y1="414" x2="230" y2="414"/></g><g class="s3-roll"><circle cx="260" cy="414" r="10"/><line x1="250" y1="414" x2="270" y2="414"/></g><g class="s3-roll"><circle cx="300" cy="414" r="10"/><line x1="290" y1="414" x2="310" y2="414"/></g><g class="s3-roll"><circle cx="340" cy="414" r="10"/><line x1="330" y1="414" x2="350" y2="414"/></g><g class="s3-roll"><circle cx="380" cy="414" r="10"/><line x1="370" y1="414" x2="390" y2="414"/></g>
+</g>
+</g>
