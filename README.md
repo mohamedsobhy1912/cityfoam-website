@@ -21,4 +21,5 @@ Settings → Pages → Source: *Deploy from a branch* → Branch: `main` / `(roo
 
 ## Media credits
 - Lifestyle and texture clips (`media/hero-sleep.mp4`, `media/homes.mp4`, `media/hotels.mp4`, `media/sewing.mp4`, `media/red-fabric.mp4`) and the bedroom/pillow stills in `img/products/` come from [Mixkit](https://mixkit.co) under the Mixkit Stock Video Free License (free for commercial use, no attribution required).
-- Factory footage and photos (`media/pour-*.mp4`, `media/blocks.*`, `media/tanks.jpg`, `media/line.jpg`) and the foam textures in `img/foam/` are City Foam's own footage, color-graded for the web.
+- Factory footage and photos (`media/pour-dark.mp4`, `media/blocks.jpg`, `media/line.jpg`) and the foam textures in `img/foam/` are City Foam's own footage, color-graded for the web.
+- The production-line scenes in the "Inside the factory" section are drawn inline SVG with CSS animation; the foam inside them uses the textures from `img/foam/`.
