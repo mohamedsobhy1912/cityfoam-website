@@ -7,6 +7,12 @@
       "skillPath": "skills/find-skills/SKILL.md",
       "computedHash": "7bc223e2aafbdbf6e50ea243ba6ef67fe432bb069ab439fea0390795dac0bf7f"
     },
+    "freellmapi-proxy": {
+      "source": "reason-machines/trending-skills",
+      "sourceType": "github",
+      "skillPath": "skills/freellmapi-proxy/SKILL.md",
+      "computedHash": "3c6a9e104fa51fa32faf917986b6ce0349d792561c69d8daf334399f1adb1538"
+    },
     "frontend-design": {
       "source": "anthropics/skills",
       "sourceType": "github",

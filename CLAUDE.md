@@ -38,3 +38,5 @@ the current task needs.
 - `web-design-guidelines` — UI/UX/accessibility review against Web Interface Guidelines
 - `seo-audit` — technical and on-page SEO audit (coreyhaines31/marketingskills)
 - `schema` — JSON-LD structured data (coreyhaines31/marketingskills)
+- `freellmapi-proxy` — set up and use the self-hosted FreeLLMAPI proxy (tashfeenahmed/freellmapi);
+  personal experimentation only per upstream, not for production features of this site
