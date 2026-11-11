@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react';
-import Magnet from '../vendor/reactbits/Magnet.jsx';
-import SectionHead from './SectionHead.jsx';
 import { useLang } from '../lib/i18n.jsx';
 import { useInquiry } from '../lib/inquiry.jsx';
 import { EMAIL, PHONE, MAP_URL } from '../content.js';
-import { prefersReducedMotion } from '../lib/motion.js';
+import { PhoneIcon, MailIcon, PinIcon } from './Icons.jsx';
 
 export default function Contact() {
   const { c } = useLang();
-  const f = c.contact.form;
+  const k = c.contact;
+  const f = k.form;
   const { type } = useInquiry();
   const [topic, setTopic] = useState(0);
   const [sent, setSent] = useState(false);
@@ -32,44 +31,43 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="section section--ink contact" aria-labelledby="contact-title">
-      <div className="container contact__grid">
-        <div>
-          <SectionHead id="contact-title" eyebrow={c.contact.eyebrow} title={c.contact.title} lead={c.contact.lead} />
-          <dl className="contact__info">
-            <div data-reveal>
-              <dt>{c.contact.phoneLabel}</dt>
-              <dd>
-                <a href={`tel:${PHONE}`} className="contact__phone" dir="ltr">
-                  {PHONE}
-                </a>
-              </dd>
-            </div>
-            <div data-reveal>
-              <dt>{c.contact.emailLabel}</dt>
-              <dd>
+    <section id="contact" className="section section--mist" aria-labelledby="contact-title">
+      <div className="wrap contact">
+        <div className="contact__info">
+          <h2 id="contact-title">{k.title}</h2>
+          <p className="contact__lead">{k.lead}</p>
+
+          <a href={`tel:${PHONE}`} className="hotline">
+            <span className="hotline__label">{k.phoneLabel}</span>
+            <span className="hotline__num" dir="ltr">
+              {PHONE}
+            </span>
+          </a>
+
+          <ul className="contact__list">
+            <li>
+              <MailIcon />
+              <div>
+                <span className="contact__label">{k.emailLabel}</span>
                 <a href={`mailto:${EMAIL}`} dir="ltr">
                   {EMAIL}
                 </a>
-              </dd>
-            </div>
-            <div data-reveal>
-              <dt>{c.contact.businessLabel}</dt>
-              <dd>{c.contact.business}</dd>
-            </div>
-            <div data-reveal>
-              <dt>{c.contact.locationLabel}</dt>
-              <dd>
-                {c.contact.location}
+              </div>
+            </li>
+            <li>
+              <PinIcon />
+              <div>
+                <span className="contact__label">{k.locationLabel}</span>
+                <span>{k.location}</span>
                 <a href={MAP_URL} className="contact__map" target="_blank" rel="noopener noreferrer">
-                  {c.contact.map}
-                  <span aria-hidden="true"> ↗</span>
+                  {k.map}
                 </a>
-              </dd>
-            </div>
-          </dl>
+              </div>
+            </li>
+          </ul>
         </div>
-        <form className="form" onSubmit={submit} data-reveal>
+
+        <form className="form" onSubmit={submit}>
           <div className="form__row">
             <label className="field">
               <span>{f.name}</span>
@@ -83,20 +81,20 @@ export default function Contact() {
           <div className="form__row">
             <label className="field">
               <span>{f.phone}</span>
-              <input name="phone" type="tel" autoComplete="tel" dir="ltr" />
+              <input name="phone" type="tel" autoComplete="tel" inputMode="tel" dir="ltr" />
             </label>
             <label className="field">
               <span>{f.email}</span>
               <input name="email" type="email" autoComplete="email" inputMode="email" spellCheck={false} dir="ltr" />
             </label>
           </div>
-          <fieldset className="field field--types">
+          <fieldset className="field">
             <legend>{f.type}</legend>
-            <div className="type-pills">
+            <div className="choices">
               {f.types.map((t, i) => (
-                <label key={t} className={`type-pill${topic === i ? ' is-on' : ''}`}>
+                <label key={t} className="choice">
                   <input type="radio" name="type" value={i} checked={topic === i} onChange={() => setTopic(i)} />
-                  {t}
+                  <span>{t}</span>
                 </label>
               ))}
             </div>
@@ -105,26 +103,21 @@ export default function Contact() {
             <span>{f.message}</span>
             <textarea name="message" rows="5" required placeholder={f.messagePh} />
           </label>
-          <div className="form__foot">
-            <Magnet padding={50} magnetStrength={5} disabled={prefersReducedMotion()}>
-              <button type="submit" className="btn btn--primary">
-                {f.send}
-                <span className="btn__arrow" aria-hidden="true">→</span>
-              </button>
-            </Magnet>
-            <p className="form__note" aria-live="polite">
-              {sent ? (
-                <>
-                  {f.sent}{' '}
-                  <a href={`mailto:${EMAIL}`} dir="ltr">
-                    {EMAIL}
-                  </a>
-                </>
-              ) : (
-                f.note
-              )}
-            </p>
-          </div>
+          <button type="submit" className="btn btn--red">
+            {f.send}
+          </button>
+          <p className="form__note" aria-live="polite">
+            {sent ? (
+              <>
+                {f.sent}{' '}
+                <a href={`mailto:${EMAIL}`} dir="ltr">
+                  {EMAIL}
+                </a>
+              </>
+            ) : (
+              f.note
+            )}
+          </p>
         </form>
       </div>
     </section>

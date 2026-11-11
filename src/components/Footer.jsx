@@ -1,52 +1,41 @@
 import { useLang } from '../lib/i18n.jsx';
-import { useSmoothScroll } from '../lib/SmoothScroll.jsx';
+import { asset } from '../lib/util.js';
 import { EMAIL, PHONE, MAP_URL } from '../content.js';
-import { asset } from '../lib/motion.js';
 
 export default function Footer() {
   const { c } = useLang();
-  const { scrollTo } = useSmoothScroll();
-  const go = (e, id) => {
-    e.preventDefault();
-    scrollTo(id);
-  };
   return (
     <footer className="footer">
-      <div className="container footer__grid">
-        <div className="footer__brand">
-          <img src={asset('img/logo-white.png')} alt="City Foam" width="160" height="66" loading="lazy" />
+      <div className="wrap footer__grid">
+        <div>
+          <img className="footer__logo" src={asset('img/logo-white.png')} alt="City Foam" width="160" height="66" loading="lazy" />
           <p>{c.footer.desc}</p>
         </div>
-        <nav aria-label={c.footer.navTitle}>
-          <h2 className="footer__title">{c.footer.navTitle}</h2>
+        <nav aria-label={c.menu}>
           <ul>
             {c.nav.map(([id, label]) => (
               <li key={id}>
-                <a href={`#${id}`} onClick={e => go(e, id)}>
-                  {label}
-                </a>
+                <a href={`#${id}`}>{label}</a>
               </li>
             ))}
           </ul>
         </nav>
         <div>
-          <h2 className="footer__title">{c.footer.productsTitle}</h2>
+          <h2>{c.footer.productsTitle}</h2>
           <ul>
             {c.products.items.map(p => (
               <li key={p.key}>
-                <a href="#products" onClick={e => go(e, 'products')}>
-                  {p.name}
-                </a>
+                <a href="#products">{p.name}</a>
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <h2 className="footer__title">{c.footer.contactTitle}</h2>
+          <h2>{c.footer.contactTitle}</h2>
           <ul>
             <li>
-              <a href={`tel:${PHONE}`} dir="ltr">
-                {c.contact.phoneLabel} {PHONE}
+              <a href={`tel:${PHONE}`}>
+                {c.contact.phoneLabel} <span dir="ltr">{PHONE}</span>
               </a>
             </li>
             <li>
@@ -59,19 +48,11 @@ export default function Footer() {
                 {c.contact.location}
               </a>
             </li>
-            <li>
-              <a href="?intro">{c.footer.replay}</a>
-            </li>
           </ul>
         </div>
       </div>
-      <div className="container footer__bottom">
-        <span>
-          © {new Date().getFullYear()} City Foam — سيتي فوم. {c.footer.rights}
-        </span>
-        <span className="footer__word" aria-hidden="true">
-          CITY FOAM
-        </span>
+      <div className="wrap footer__bottom">
+        © {new Date().getFullYear()} City Foam. {c.footer.rights}
       </div>
     </footer>
   );

@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-City Foam corporate website — React 19 + Vite, animations with GSAP / Lenis / Motion.
+City Foam corporate website — React 19 + Vite, plain CSS (`src/styles/site.css`), no animation libraries.
 Commands: `npm run dev`, `npm run build`, `npm run preview`.
 After any change run `npm run build` and commit `docs/` (GitHub Pages serves it). The live URL for
 SEO tags is `SITE_URL` in `.env` (default in `vite.config.js`).

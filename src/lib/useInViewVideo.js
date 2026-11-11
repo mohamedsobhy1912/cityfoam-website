@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { prefersReducedMotion } from './motion.js';
+import { prefersReducedMotion } from './util.js';
 
 // Plays a muted video only while it is on screen; never autoplays for reduced-motion users.
 export function useInViewVideo() {

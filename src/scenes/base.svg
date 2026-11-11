@@ -1,4 +1,0 @@
-<rect width="400" height="500" fill="url(#SC-bg)"/>
-<rect width="400" height="500" fill="url(#SC-glow)"/>
-<rect y="430" width="400" height="70" fill="#121214"/>
-<g stroke="#202125" stroke-width="1"><line x1="0" y1="430" x2="400" y2="430" stroke="#2c2d31"/><line x1="200" y1="430" x2="-60" y2="500"/><line x1="200" y1="430" x2="60" y2="500"/><line x1="200" y1="430" x2="200" y2="500"/><line x1="200" y1="430" x2="340" y2="500"/><line x1="200" y1="430" x2="460" y2="500"/><line x1="0" y1="455" x2="400" y2="455"/><line x1="0" y1="482" x2="400" y2="482"/></g>
