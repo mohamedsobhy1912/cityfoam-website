@@ -51,6 +51,9 @@ export default function Footer() {
           </ul>
         </div>
       </div>
+      <p className="footer__word" aria-hidden="true" style={{ backgroundImage: `url(${asset('img/foam/strip.jpg')})` }}>
+        CITY FOAM
+      </p>
       <div className="wrap footer__bottom">
         © {new Date().getFullYear()} City Foam. {c.footer.rights}
       </div>

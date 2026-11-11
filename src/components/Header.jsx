@@ -7,10 +7,11 @@ import { PhoneIcon } from './Icons.jsx';
 export default function Header() {
   const { c, lang, setLang } = useLang();
   const [open, setOpen] = useState(false);
-  const [raised, setRaised] = useState(false);
+  const [solid, setSolid] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setRaised(window.scrollY > 8);
+    // Transparent over the full-screen hero, solid once the hero has scrolled away.
+    const onScroll = () => setSolid(window.scrollY > window.innerHeight * 0.6);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -24,10 +25,10 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header className={`header${raised ? ' is-raised' : ''}`}>
+    <header className={`header${solid || open ? ' is-solid' : ''}`}>
       <div className="wrap header__bar">
         <a href="#top" className="header__logo" onClick={() => setOpen(false)}>
-          <img src={asset('img/logo.png')} alt="City Foam" width="509" height="211" />
+          <img src={asset(solid || open ? 'img/logo.png' : 'img/logo-white.png')} alt="City Foam" width="509" height="211" />
         </a>
 
         <nav id="site-nav" className={`header__nav${open ? ' is-open' : ''}`} aria-label={c.menu}>

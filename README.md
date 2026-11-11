@@ -4,7 +4,7 @@ Bilingual (Arabic default / English) corporate site for **City Foam (سيتي ف
 
 ## Stack
 - **React 19 + Vite**: component architecture, static build. No animation libraries; motion is CSS-only and answers user actions.
-- **Design**: white and pale sky-blue surfaces, navy text, the logo red for primary actions only, soft rounded corners, IBM Plex Sans Arabic for both languages. The signature element is the colour range built from real foam textures (`Colors.jsx`).
+- **Design**: white and pale sky-blue surfaces, navy text, the logo red for primary actions only, soft rounded corners, IBM Plex Sans Arabic for both languages. Full-screen hero video, oversized type, stacking product panels and CSS scroll-driven reveals (no JS libraries; off for reduced motion). The signature element is a giant word filled with real foam textures (`public/img/foam/strip.jpg`, used in `Colors.jsx` and the footer).
 
 ## Develop / build
 ```bash

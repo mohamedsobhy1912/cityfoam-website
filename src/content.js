@@ -44,6 +44,7 @@ export const CONTENT = {
       play: 'تشغيل الفيديو'
     },
     colors: {
+      word: 'إسفنج',
       title: 'ننتج الإسفنج بألوان متعددة',
       text: 'صور حقيقية من ساحة البلوكات. اذكر اللون الذي تريده في طلبك.',
       names: { pink: 'وردي', red: 'أحمر', magenta: 'موف', blue: 'أزرق', orange: 'برتقالي', green: 'أخضر' }
@@ -190,6 +191,7 @@ export const CONTENT = {
       play: 'Play video'
     },
     colors: {
+      word: 'FOAM',
       title: 'We produce foam in many colours',
       text: 'Real photos from our block yard. Name the colour you need in your order.',
       names: { pink: 'Pink', red: 'Red', magenta: 'Magenta', blue: 'Blue', orange: 'Orange', green: 'Green' }
