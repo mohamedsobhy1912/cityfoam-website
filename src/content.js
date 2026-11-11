@@ -45,7 +45,9 @@ export const CONTENT = {
       cta1: 'استكشف منتجاتنا',
       cta2: 'تعرّف على سيتي فوم',
       facts: ['تأسست 2008 · مصر', 'تكنولوجيا صب ألمانية Hennecke', 'بلوكات · شيتات · مراتب'],
-      scroll: 'مرّر للأسفل'
+      scroll: 'مرّر للأسفل',
+      pause: 'إيقاف الفيديو',
+      play: 'تشغيل الفيديو'
     },
     about: {
       eyebrow: 'من نحن',
@@ -183,7 +185,8 @@ export const CONTENT = {
         messagePh: 'اكتب تفاصيل طلبك: المنتج، الكثافة، المقاسات، الكمية…',
         send: 'إرسال الطلب',
         note: 'عند الإرسال سيُفتح تطبيق البريد لديك والرسالة جاهزة.',
-        subject: 'طلب من موقع سيتي فوم'
+        subject: 'طلب من موقع سيتي فوم',
+        sent: 'جارٍ فتح تطبيق البريد… إن لم يُفتح، راسلنا مباشرة على'
       }
     },
     footer: {
@@ -213,7 +216,9 @@ export const CONTENT = {
       cta1: 'Explore our products',
       cta2: 'Discover City Foam',
       facts: ['Est. 2008 · Egypt', 'German Hennecke foaming technology', 'Blocks · Sheets · Mattresses'],
-      scroll: 'Scroll'
+      scroll: 'Scroll',
+      pause: 'Pause video',
+      play: 'Play video'
     },
     about: {
       eyebrow: 'About City Foam',
@@ -351,7 +356,8 @@ export const CONTENT = {
         messagePh: 'Tell us what you need: product, density, dimensions, quantity…',
         send: 'Send inquiry',
         note: 'Sending opens your email app with the message ready to go.',
-        subject: 'Inquiry from the City Foam website'
+        subject: 'Inquiry from the City Foam website',
+        sent: 'Opening your email app… If nothing opened, email us directly at'
       }
     },
     footer: {

@@ -29,7 +29,10 @@ html[lang='ar'] {
 
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; padding: 0; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; color-scheme: dark; -webkit-tap-highlight-color: transparent; }
+a, button, input, label, textarea { touch-action: manipulation; }
+h1, h2, h3, h4 { text-wrap: balance; }
+p { text-wrap: pretty; }
 body {
   font-family: var(--f-body);
   font-size: 17px;
@@ -55,6 +58,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   padding: 8px 14px; transform: translateY(-150%); transition: transform 0.2s;
 }
 .skip-link:focus { transform: none; }
+section[id] { scroll-margin-top: var(--header-h); }
 :focus-visible { outline: 2px solid var(--red-hi); outline-offset: 3px; }
 
 /* ---------- Typography ---------- */

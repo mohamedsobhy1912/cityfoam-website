@@ -25,6 +25,7 @@ export default function Intro({ onReveal, onFinish }) {
   const root = useRef(null);
   const blocks = useRef([]);
   const done = useRef(false);
+  const skipBtn = useRef(null);
 
   useEffect(() => {
     if (!show) {
@@ -33,6 +34,7 @@ export default function Intro({ onReveal, onFinish }) {
       return undefined;
     }
     document.body.classList.add('no-scroll');
+    skipBtn.current?.focus({ preventScroll: true });
     const W = window.innerWidth;
     const H = window.innerHeight;
     const cols = Math.max(3, Math.round(W / 160));
@@ -120,7 +122,7 @@ export default function Intro({ onReveal, onFinish }) {
 
   if (!show) return null;
   return (
-    <div className={`intro${ready ? ' is-ready' : ''}`} ref={root} role="dialog" aria-label="City Foam" onClick={() => leave()}>
+    <div className={`intro${ready ? ' is-ready' : ''}`} ref={root} role="dialog" aria-modal="true" aria-label="City Foam" onClick={() => leave()}>
       <div className="intro__wall" ref={wall} />
       <div className="intro__card">
         <img src={asset('img/logo.png')} alt="City Foam" />
@@ -128,6 +130,7 @@ export default function Intro({ onReveal, onFinish }) {
         <p className="intro__hint">{c.intro.enter}</p>
       </div>
       <button
+        ref={skipBtn}
         type="button"
         className="intro__skip"
         onClick={e => {

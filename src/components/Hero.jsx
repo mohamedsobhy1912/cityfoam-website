@@ -18,6 +18,8 @@ export default function Hero({ ready }) {
   const video = useRef(null);
   const [source, setSource] = useState(pickSource);
   const reduce = prefersReducedMotion();
+  // Looping background video runs well past 5s, so it needs a pause control (WCAG 2.2.2).
+  const [paused, setPaused] = useState(reduce);
 
   useEffect(() => {
     const mq = window.matchMedia('(max-aspect-ratio: 4/5)');
@@ -28,8 +30,10 @@ export default function Hero({ ready }) {
 
   useEffect(() => {
     const v = video.current;
-    if (v && !reduce) v.play().catch(() => {});
-  }, [source, reduce]);
+    if (!v) return;
+    if (paused) v.pause();
+    else v.play().catch(() => setPaused(true));
+  }, [source, paused]);
 
   // Cinematic entrance once the intro has finished, then a slow parallax on scroll.
   useGSAP(
@@ -69,7 +73,7 @@ export default function Hero({ ready }) {
           muted
           loop
           playsInline
-          autoPlay={!reduce}
+          autoPlay={!paused}
           preload="auto"
           aria-hidden="true"
         />
@@ -119,6 +123,11 @@ export default function Hero({ ready }) {
           {c.hero.facts.map(f => (
             <li key={f}>{f}</li>
           ))}
+          <li className="hero__toggle">
+            <button type="button" className="video-toggle" onClick={() => setPaused(p => !p)} aria-label={paused ? c.hero.play : c.hero.pause} aria-pressed={paused}>
+              <span className={`video-toggle__icon${paused ? ' is-paused' : ''}`} aria-hidden="true" />
+            </button>
+          </li>
           <li className="hero__scroll" aria-hidden="true">
             <span>{c.hero.scroll}</span>
             <i />

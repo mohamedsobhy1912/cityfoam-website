@@ -2,7 +2,7 @@
 .section { position: relative; padding: clamp(88px, 12vw, 168px) 0; }
 .section--ink { background: var(--ink); color: #fff; }
 .section--graphite { background: var(--graphite); color: #fff; }
-.section--paper { background: var(--paper); color: var(--text-dark); }
+.section--paper { background: var(--paper); color: var(--text-dark); color-scheme: light; }
 .section--paper .eyebrow { color: var(--red); }
 
 /* ================= Intro ================= */
@@ -63,6 +63,15 @@ html[lang='ar'] .hero__facts li { letter-spacing: 0; font-size: 0.92rem; }
 .hero__scroll i { width: 1px; height: 30px; background: rgba(255, 255, 255, 0.4); position: relative; overflow: hidden; }
 .hero__scroll i::after { content: ''; position: absolute; inset: 0; background: var(--red-hi); animation: drop 1.8s var(--ease-out) infinite; }
 @keyframes drop { from { transform: translateY(-100%); } to { transform: translateY(100%); } }
+.hero__facts li.hero__toggle { flex: none; padding-block: 10px; padding-inline: 0; margin-inline-end: 18px; border: 0; }
+.video-toggle {
+  width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid var(--rule-light); background: transparent;
+  color: #fff; cursor: pointer; transition: background-color 0.3s, border-color 0.3s;
+}
+.video-toggle:hover { background: #fff; border-color: #fff; color: var(--ink); }
+/* Pause = two bars; paused state shows a play triangle. */
+.video-toggle__icon { width: 10px; height: 12px; border-inline: 3px solid currentColor; }
+.video-toggle__icon.is-paused { width: 0; height: 0; border-inline: 0; border-block: 6px solid transparent; border-left: 10px solid currentColor; }
 
 /* ================= About ================= */
 .about__grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(40px, 7vw, 120px); align-items: end; }
@@ -287,6 +296,7 @@ html[lang='ar'] .footer__title { letter-spacing: 0; font-size: 0.92rem; }
   .hero__ctas > * > div, .hero__ctas > * > * { width: 100%; }
   .hero__facts li { font-size: 0.72rem; padding-block: 16px; }
   .hero__scroll { display: none !important; }
+  .hero__facts li.hero__toggle { margin: 0; }
   .stats { grid-template-columns: 1fr 1fr 1fr; }
   .stats__item { padding-inline: 0 10px; margin-inline-end: 10px; }
   .stats__label { font-size: 0.78rem; }

@@ -11,6 +11,7 @@ export default function Contact() {
   const f = c.contact.form;
   const { type } = useInquiry();
   const [topic, setTopic] = useState(0);
+  const [sent, setSent] = useState(false);
   useEffect(() => setTopic(type), [type]);
 
   // Static hosting has no backend: build a mailto with the filled-in fields.
@@ -26,6 +27,7 @@ export default function Contact() {
       '',
       d.get('message') || ''
     ].join('\n');
+    setSent(true);
     window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(`${f.subject} — ${f.types[topic]}`)}&body=${encodeURIComponent(body)}`;
   };
 
@@ -71,7 +73,7 @@ export default function Contact() {
             </label>
             <label className="field">
               <span>{f.email}</span>
-              <input name="email" type="email" autoComplete="email" dir="ltr" />
+              <input name="email" type="email" autoComplete="email" inputMode="email" spellCheck={false} dir="ltr" />
             </label>
           </div>
           <fieldset className="field field--types">
@@ -96,7 +98,18 @@ export default function Contact() {
                 <span className="btn__arrow" aria-hidden="true">→</span>
               </button>
             </Magnet>
-            <p className="form__note">{f.note}</p>
+            <p className="form__note" aria-live="polite">
+              {sent ? (
+                <>
+                  {f.sent}{' '}
+                  <a href={`mailto:${EMAIL}`} dir="ltr">
+                    {EMAIL}
+                  </a>
+                </>
+              ) : (
+                f.note
+              )}
+            </p>
           </div>
         </form>
       </div>

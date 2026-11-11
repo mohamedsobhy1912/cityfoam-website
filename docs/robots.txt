@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mohamedsobhy1912.github.io/cityfoam-website/sitemap.xml
