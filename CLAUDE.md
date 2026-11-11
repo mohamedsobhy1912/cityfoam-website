@@ -40,3 +40,8 @@ the current task needs.
 - `schema` — JSON-LD structured data (coreyhaines31/marketingskills)
 - `freellmapi-proxy` — set up and use the self-hosted FreeLLMAPI proxy (tashfeenahmed/freellmapi);
   personal experimentation only per upstream, not for production features of this site
+- `lemo-opuscar` — short films made in code in 66 styles (lemomo-ai/lemo-opuscar). Using it downloads
+  the library to `~/lemo-opuscar` plus npm/pip packages and a headless browser; keep film projects
+  outside `src/`, and add only the final rendered video to `public/media/`.
+- `ponytail`, `ponytail-review`, `ponytail-audit`, `ponytail-debt`, `ponytail-gain`, `ponytail-help` —
+  smallest-change coding style, code review and repo audit (DietrichGebert/ponytail)
