@@ -48,5 +48,7 @@ the current task needs.
   smallest-change coding style, code review and repo audit (DietrichGebert/ponytail)
 - `agent-reach` — read-only reading/search of Twitter/X, Reddit, YouTube, GitHub, etc. (Panniantong/Agent-Reach).
   Needs the `agent-reach` CLI, which is not installed; ask the user before installing it or logging in anywhere.
-- `skill-inspector` — security review of a skill before installing it (NVIDIA/SkillSpector). The `skillspector`
-  CLI is not installed; without it, do the skill's manual review and say no scan ran.
+- `skill-inspector` — security review of a skill before installing it (NVIDIA/SkillSpector). The environment
+  setup script installs the `skillspector` CLI at `~/.local/bin/skillspector`; run
+  `skillspector scan <dir> --no-llm --format json --output <file>` on a scratch clone, then read the source
+  behind every HIGH/CRITICAL finding. If the CLI is missing, do the manual review and say no scan ran.
