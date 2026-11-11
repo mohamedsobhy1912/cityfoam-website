@@ -21,7 +21,8 @@ without asking for permission first:
      `vercel-labs/agent-skills`, `vercel-labs/skills`.
 3. **Install** the best match: `npx -y skills add <owner/repo> --skill <name> -y`
    (installs into `.agents/skills/<name>` and links it into `.claude/skills/`).
-4. **Review before use**: read every file the skill added. Do not use a skill that runs
+4. **Review before use**: follow the `skill-inspector` skill (NVIDIA SkillSpector) on a clone in the
+   scratchpad before installing; read every file the skill added. Do not use a skill that runs
    unexpected scripts, sends data to unknown hosts, or asks for credentials — report it instead.
 5. **Learn and apply**: read the new `SKILL.md` fully (a skill installed mid-session may not
    appear in the Skill tool list, so read the file directly) and follow it for the task.
@@ -45,3 +46,7 @@ the current task needs.
   outside `src/`, and add only the final rendered video to `public/media/`.
 - `ponytail`, `ponytail-review`, `ponytail-audit`, `ponytail-debt`, `ponytail-gain`, `ponytail-help` —
   smallest-change coding style, code review and repo audit (DietrichGebert/ponytail)
+- `agent-reach` — read-only reading/search of Twitter/X, Reddit, YouTube, GitHub, etc. (Panniantong/Agent-Reach).
+  Needs the `agent-reach` CLI, which is not installed; ask the user before installing it or logging in anywhere.
+- `skill-inspector` — security review of a skill before installing it (NVIDIA/SkillSpector). The `skillspector`
+  CLI is not installed; without it, do the skill's manual review and say no scan ran.
