@@ -2,6 +2,8 @@
 
 City Foam corporate website — React 19 + Vite, animations with GSAP / Lenis / Motion.
 Commands: `npm run dev`, `npm run build`, `npm run preview`.
+After any change run `npm run build` and commit `docs/` (GitHub Pages serves it). The live URL for
+SEO tags is `SITE_URL` in `.env` (default in `vite.config.js`).
 
 ## Skills workflow (standing instruction from the project owner)
 
@@ -34,3 +36,5 @@ the current task needs.
 - `find-skills` — discover and install skills
 - `frontend-design` — distinctive visual design direction
 - `web-design-guidelines` — UI/UX/accessibility review against Web Interface Guidelines
+- `seo-audit` — technical and on-page SEO audit (coreyhaines31/marketingskills)
+- `schema` — JSON-LD structured data (coreyhaines31/marketingskills)
