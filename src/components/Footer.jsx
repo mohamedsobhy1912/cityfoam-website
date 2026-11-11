@@ -1,6 +1,6 @@
 import { useLang } from '../lib/i18n.jsx';
 import { useSmoothScroll } from '../lib/SmoothScroll.jsx';
-import { EMAIL } from '../content.js';
+import { EMAIL, PHONE, MAP_URL } from '../content.js';
 import { asset } from '../lib/motion.js';
 
 export default function Footer() {
@@ -45,11 +45,20 @@ export default function Footer() {
           <h2 className="footer__title">{c.footer.contactTitle}</h2>
           <ul>
             <li>
+              <a href={`tel:${PHONE}`} dir="ltr">
+                {c.contact.phoneLabel} {PHONE}
+              </a>
+            </li>
+            <li>
               <a href={`mailto:${EMAIL}`} dir="ltr">
                 {EMAIL}
               </a>
             </li>
-            <li>{c.contact.location}</li>
+            <li>
+              <a href={MAP_URL} target="_blank" rel="noopener noreferrer">
+                {c.contact.location}
+              </a>
+            </li>
             <li>
               <a href="?intro">{c.footer.replay}</a>
             </li>

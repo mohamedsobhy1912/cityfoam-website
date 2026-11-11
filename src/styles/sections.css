@@ -228,6 +228,8 @@ html[lang='ar'] .why__item h3 { text-transform: none; font-size: 1.32rem; }
 html[lang='ar'] .contact__info dt { letter-spacing: 0; font-size: 0.9rem; }
 .contact__info dd { font-size: 1.12rem; margin-top: 4px; word-break: break-word; }
 .contact__info a:hover { color: var(--red-hi); }
+.contact__phone { font-family: var(--f-display); font-weight: 800; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.1; letter-spacing: 0.02em; }
+.contact__map { display: block; width: fit-content; margin-top: 8px; font-size: 0.9rem; color: var(--muted-light); text-decoration: underline; text-underline-offset: 4px; }
 .form { background: var(--graphite); border: 1px solid var(--rule-light); padding: clamp(24px, 4vw, 48px); }
 .form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; border: 0; }

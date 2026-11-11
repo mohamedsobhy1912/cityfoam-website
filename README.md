@@ -23,7 +23,7 @@ npm run build    # outputs the static site to docs/
 - `public/` — logo, foam textures, photos and videos.
 
 ## Content rules
-Only verified facts are published: founded 2008, Egypt, flexible PU foam + mattresses, German Hennecke foaming machine, foam produced in multiple colors, contact email. Add phone, address, map, social links, certifications or capacities only after the company confirms them.
+Only verified facts are published: founded 2008, Egypt, flexible PU foam + mattresses, German Hennecke foaming machine, foam produced in multiple colors, contact email, hotline 16298, address (Industrial Zone 9, Basateen El Ismailia, Inshas). Add social links, certifications or capacities only after the company confirms them.
 
 ## Media credits
 - Factory photos/videos, gallery stills and foam textures: City Foam's own footage, color-graded.

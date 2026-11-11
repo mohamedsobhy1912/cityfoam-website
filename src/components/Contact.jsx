@@ -3,7 +3,7 @@ import Magnet from '../vendor/reactbits/Magnet.jsx';
 import SectionHead from './SectionHead.jsx';
 import { useLang } from '../lib/i18n.jsx';
 import { useInquiry } from '../lib/inquiry.jsx';
-import { EMAIL } from '../content.js';
+import { EMAIL, PHONE, MAP_URL } from '../content.js';
 import { prefersReducedMotion } from '../lib/motion.js';
 
 export default function Contact() {
@@ -38,6 +38,14 @@ export default function Contact() {
           <SectionHead id="contact-title" eyebrow={c.contact.eyebrow} title={c.contact.title} lead={c.contact.lead} />
           <dl className="contact__info">
             <div data-reveal>
+              <dt>{c.contact.phoneLabel}</dt>
+              <dd>
+                <a href={`tel:${PHONE}`} className="contact__phone" dir="ltr">
+                  {PHONE}
+                </a>
+              </dd>
+            </div>
+            <div data-reveal>
               <dt>{c.contact.emailLabel}</dt>
               <dd>
                 <a href={`mailto:${EMAIL}`} dir="ltr">
@@ -51,7 +59,13 @@ export default function Contact() {
             </div>
             <div data-reveal>
               <dt>{c.contact.locationLabel}</dt>
-              <dd>{c.contact.location}</dd>
+              <dd>
+                {c.contact.location}
+                <a href={MAP_URL} className="contact__map" target="_blank" rel="noopener noreferrer">
+                  {c.contact.map}
+                  <span aria-hidden="true"> ↗</span>
+                </a>
+              </dd>
             </div>
           </dl>
         </div>

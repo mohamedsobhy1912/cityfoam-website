@@ -5,6 +5,8 @@
 
 export const EMAIL = 'mohamed.sobhy@cityfoameg.com';
 export const FOUNDED = 2008;
+export const PHONE = '16298'; // hotline
+export const MAP_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('إنشاص المنطقة الصناعية التاسعة بساتين الإسماعيلية')}`;
 
 const nav = {
   ar: [
@@ -170,8 +172,10 @@ export const CONTENT = {
       title: ['لنبدأ', 'طلبك القادم.'],
       lead: 'للاستفسارات التجارية وعروض الأسعار وطلبات الجملة، راسلنا وسيعود إليك فريقنا.',
       emailLabel: 'البريد الإلكتروني',
-      locationLabel: 'الموقع',
-      location: 'جمهورية مصر العربية',
+      phoneLabel: 'الخط الساخن',
+      locationLabel: 'العنوان',
+      location: 'إنشاص، المنطقة الصناعية التاسعة، بساتين الإسماعيلية، مصر',
+      map: 'افتح على الخريطة',
       businessLabel: 'الاستفسارات التجارية',
       business: 'بلوكات · شيتات · مراتب · طلبات خاصة',
       form: {
@@ -341,8 +345,10 @@ export const CONTENT = {
       title: ['Let’s start', 'your next order.'],
       lead: 'For business inquiries, quotations and wholesale orders, write to us and our team will get back to you.',
       emailLabel: 'Email',
-      locationLabel: 'Location',
-      location: 'Egypt',
+      phoneLabel: 'Hotline',
+      locationLabel: 'Address',
+      location: 'Industrial Zone 9, Basateen El Ismailia, Inshas, Egypt',
+      map: 'Open in Google Maps',
       businessLabel: 'Business inquiries',
       business: 'Blocks · Sheets · Mattresses · Custom orders',
       form: {
