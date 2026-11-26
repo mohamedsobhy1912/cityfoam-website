@@ -3,6 +3,8 @@ import Intro from './components/Intro.jsx';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
 import About from './components/About.jsx';
+import History from './components/History.jsx';
+import Founder from './components/Founder.jsx';
 import Products from './components/Products.jsx';
 import Manufacturing from './components/Manufacturing.jsx';
 import Quality from './components/Quality.jsx';
@@ -57,6 +59,8 @@ export default function App() {
       <main id="main">
         <Hero ready={ready} />
         <About />
+        <History />
+        <Founder />
         <Products />
         <Manufacturing />
         <Quality />

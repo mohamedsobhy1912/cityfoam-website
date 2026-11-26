@@ -1,10 +1,13 @@
 // All site copy, Arabic + English.
 // Only verified company facts are stated: founded 2008, Egypt, flexible PU foam + mattresses,
-// German Hennecke foaming machine, foam produced in multiple colors, contact email.
+// German Hennecke foaming machine (since 2013), foam produced in multiple colors, contact email,
+// and the history/founder facts from the group's company profile (El Salam City start, fire, rebuild in
+// Belbeis-Sharqia, first automatic cutter 2009, founder Sobhy Bayoumi, sister brand Wonderland).
 // Do not add capacities, certifications, phone numbers or addresses until the company confirms them.
 
 export const EMAIL = 'mohamed.sobhy@cityfoameg.com';
 export const FOUNDED = 2008;
+export const WONDERLAND_URL = 'https://wonderlandhomecollection.com';
 
 const nav = {
   ar: [
@@ -52,8 +55,8 @@ export const CONTENT = {
       title: ['خبرة نبني عليها.', 'وجودة تقودنا.'],
       lead: 'منذ عام 2008 وسيتي فوم تصنّع الإسفنج البولي يوريثان المرن في مصر.',
       body: [
-        'بدأنا بالتزام واضح: إسفنج يُعتمد عليه في كل طلبية. ومع السنين تحوّل هذا الالتزام إلى منظومة إنتاج متكاملة، من خزانات الخامات إلى خط الصب إلى ساحة البلوكات.',
-        'اليوم نورّد بلوكات الإسفنج والشيتات المقطّعة والمراتب لمصانع وشركاء يحتاجون جودة ثابتة لا تتغير من طلبية لأخرى.'
+        'بدأت القصة في مدينة السلام باستثمار قدره 360,000 جنيه، وماكينات يدوية، وطموح كبير. وعندما دمّر حريق مصنعنا الأول، أعدنا البناء في بلبيس بالشرقية، ووسّعنا عملياتنا، وحوّلنا الأزمة إلى نجاح.',
+        'اليوم نعمل بماكينة صب ألمانية من Hennecke، ونورّد بلوكات الإسفنج والشيتات المقطّعة والمراتب لمصانع وشركاء يحتاجون جودة ثابتة لا تتغير من طلبية لأخرى.'
       ],
       stats: [
         { value: 2008, label: 'سنة التأسيس', from: 1990 },
@@ -61,6 +64,34 @@ export const CONTENT = {
         { value: 6, label: 'ألوان إسفنج على الأقل في ساحتنا', suffix: '+' }
       ],
       caption: 'ساحة بلوكات الإسفنج — سيتي فوم'
+    },
+    history: {
+      eyebrow: 'تاريخنا',
+      title: ['من مدينة السلام', 'إلى بلبيس.'],
+      items: [
+        { year: '2008', title: 'البداية', text: 'بدأنا بحلم واستثمار قدره 360,000 جنيه في مدينة السلام، بماكينات يدوية وطموح كبير. ورغم أن حريقًا دمّر مصنعنا الأول، أعدنا البناء في بلبيس بالشرقية ووسّعنا عملياتنا.' },
+        { year: '2009', title: 'التحوّل للأتمتة', text: 'استثمرنا في أول ماكينة تقطيع إسفنج أوتوماتيكية، لدقة وكفاءة أعلى وجودة أكثر ثباتًا.' },
+        { year: '2013', title: 'تكنولوجيا متقدمة', text: 'خطوة كبيرة: ماكينة Hennecke الألمانية. وبحسب الشركة، أصبحنا من ثلاثة مصانع فقط في مصر تمتلكها.' },
+        { year: '2021', title: 'رؤية أوسع', text: 'التزامنا بالجودة والابتكار قادنا إلى تنويع خطوط منتجاتنا.' },
+        { year: '2024', title: 'Wonderland للمفروشات', text: 'أطلقنا عبر براند Wonderland مجموعة كاملة من مفروشات البيت: ملايات، ألحفة، بطاطين، وواقيات مراتب.' }
+      ]
+    },
+    founder: {
+      eyebrow: 'المؤسس',
+      name: 'أ. صبحي بيومي',
+      role: 'المؤسس والرئيس التنفيذي',
+      body: [
+        'بنى صبحي بيومي الشركة من الصفر، مدفوعًا بشغف حقيقي بجودة الصنعة والابتكار في صناعة الإسفنج والمراتب. بدأت رحلته في عالم الأعمال في سن الرابعة عشرة، ويمتلك اليوم خبرة تتجاوز ثلاثة عقود.',
+        'يُعرف بقراراته الحاسمة والمدروسة، وبقدرته على الإنصات لفريقه وعملائه، وهو ما بنى داخل الشركة ثقافة قائمة على الثقة والتعاون. ورغم التحديات الكثيرة، ظل التطوير المستمر أساس فلسفته في القيادة.'
+      ],
+      stat: 'عامًا من الخبرة',
+      statValue: 30
+    },
+    group: {
+      eyebrow: 'من نفس المجموعة',
+      name: 'Wonderland',
+      text: 'براند المراتب ومفروشات البيت التابع لمجموعتنا: ملايات، ألحفة، بطاطين، وواقيات مراتب.',
+      cta: 'زيارة موقع Wonderland'
     },
     products: {
       eyebrow: 'المنتجات',
@@ -143,7 +174,7 @@ export const CONTENT = {
       title: ['شريك تصنيع', 'تعتمد عليه.'],
       items: [
         { title: 'خبرة منذ 2008', text: 'سنوات طويلة في تصنيع الإسفنج المرن داخل السوق المصري.' },
-        { title: 'تكنولوجيا ألمانية', text: 'ماكينة صب Hennecke لقياس وخلط دقيق.' },
+        { title: 'تكنولوجيا ألمانية', text: 'ماكينة صب Hennecke منذ 2013 لقياس وخلط دقيق.' },
         { title: 'إنتاج متكامل', text: 'من خزانات الخامات حتى البلوك والتقطيع، داخل مصنعنا.' },
         { title: 'ألوان وكثافات متعددة', text: 'نُنتج حسب احتياج كل عميل وكل استخدام.' },
         { title: 'علاقة مباشرة', text: 'تتعامل مع المصنع مباشرة، من عرض السعر حتى التسليم.' },
@@ -171,7 +202,7 @@ export const CONTENT = {
       lead: 'للاستفسارات التجارية وعروض الأسعار وطلبات الجملة، راسلنا وسيعود إليك فريقنا.',
       emailLabel: 'البريد الإلكتروني',
       locationLabel: 'الموقع',
-      location: 'جمهورية مصر العربية',
+      location: 'بلبيس، الشرقية، مصر',
       businessLabel: 'الاستفسارات التجارية',
       business: 'بلوكات · شيتات · مراتب · طلبات خاصة',
       form: {
@@ -222,8 +253,8 @@ export const CONTENT = {
       title: ['Built on experience.', 'Driven by quality.'],
       lead: 'Since 2008, City Foam has been manufacturing flexible polyurethane foam in Egypt.',
       body: [
-        'We started with a clear commitment: foam you can rely on, order after order. Over the years that commitment became a complete production operation, from raw-material tanks to the foaming line to our block yard.',
-        'Today we supply foam blocks, cut sheets and mattresses to manufacturers and partners who need consistent quality from one order to the next.'
+        'It started in El Salam City with a 360,000 EGP investment, manual machines and big ambition. When a fire destroyed our first factory, we rebuilt in Belbeis, Sharqia, expanded our operations and turned adversity into success.',
+        'Today we run a German Hennecke foaming machine and supply foam blocks, cut sheets and mattresses to manufacturers and partners who need consistent quality from one order to the next.'
       ],
       stats: [
         { value: 2008, label: 'Founded', from: 1990 },
@@ -231,6 +262,34 @@ export const CONTENT = {
         { value: 6, label: 'Foam colors in our yard, at least', suffix: '+' }
       ],
       caption: 'Foam block yard — City Foam'
+    },
+    history: {
+      eyebrow: 'Our history',
+      title: ['From El Salam City', 'to Belbeis.'],
+      items: [
+        { year: '2008', title: 'The beginning', text: 'We started with a dream and a 360,000 EGP investment in El Salam City, with manual machines and big ambition. Despite a fire destroying our first factory, we rebuilt in Belbeis, Sharqia and expanded our operations.' },
+        { year: '2009', title: 'Embracing automation', text: 'We invested in our first automatic foam-cutting machine for greater precision, efficiency and consistency.' },
+        { year: '2013', title: 'Cutting-edge technology', text: 'A giant leap: the German Hennecke system. According to the company, this made us one of only three factories in Egypt to have it.' },
+        { year: '2021', title: 'Expanding our vision', text: 'Our commitment to quality and innovation led us to diversify our product line.' },
+        { year: '2024', title: 'Wonderland home bedding', text: 'Through the Wonderland brand we introduced a full range of home bedding: bed sheets, duvets, blankets and mattress protectors.' }
+      ]
+    },
+    founder: {
+      eyebrow: 'Our founder',
+      name: 'Mr. Sobhy Bayoumi',
+      role: 'Founder & CEO',
+      body: [
+        'Sobhy Bayoumi built the company from the ground up, driven by a real passion for craftsmanship and innovation in foam and mattress manufacturing. His journey in business began at the age of 14, and today he brings more than three decades of experience.',
+        'Known for decisive, well-calculated leadership and for listening closely to his team and customers, he has built a culture of trust and collaboration. Through every challenge, continuous improvement has remained the cornerstone of his leadership.'
+      ],
+      stat: 'Years of experience',
+      statValue: 30
+    },
+    group: {
+      eyebrow: 'Part of the same group',
+      name: 'Wonderland',
+      text: 'Our group’s mattress and home-bedding brand: bed sheets, duvets, blankets and mattress protectors.',
+      cta: 'Visit Wonderland'
     },
     products: {
       eyebrow: 'Products',
@@ -313,7 +372,7 @@ export const CONTENT = {
       title: ['A manufacturing partner', 'you can rely on.'],
       items: [
         { title: 'Experience since 2008', text: 'Many years manufacturing flexible foam for the Egyptian market.' },
-        { title: 'German technology', text: 'A Hennecke foaming machine for precise metering and mixing.' },
+        { title: 'German technology', text: 'A Hennecke foaming machine since 2013 for precise metering and mixing.' },
         { title: 'Integrated production', text: 'From raw-material tanks to block and cutting, under one roof.' },
         { title: 'Colors & densities', text: 'Produced to match each customer and each application.' },
         { title: 'Direct relationship', text: 'Deal with the factory directly, from quote to delivery.' },
@@ -341,7 +400,7 @@ export const CONTENT = {
       lead: 'For business inquiries, quotations and wholesale orders, write to us and our team will get back to you.',
       emailLabel: 'Email',
       locationLabel: 'Location',
-      location: 'Egypt',
+      location: 'Belbeis, Sharqia, Egypt',
       businessLabel: 'Business inquiries',
       business: 'Blocks · Sheets · Mattresses · Custom orders',
       form: {
