@@ -27,5 +27,6 @@ Only verified facts are published: founded 2008, Egypt, flexible PU foam + mattr
 
 ## Media credits
 - Factory photos/videos, gallery stills and foam textures: City Foam's own footage, color-graded.
-- `public/media/homes.*`, `hotels.*`, `sewing.*`, `red-fabric.*` and `public/img/products/*`: [Mixkit](https://mixkit.co), Stock Video Free License (commercial use, no attribution required).
+- `public/media/homes.*`, `hotels.*`, `sewing.*`: [Mixkit](https://mixkit.co), Stock Video Free License (commercial use, no attribution required).
+- `public/media/ai/*` (product shots and the production-line banner): AI-generated with Higgsfield (GPT Image 2.6). Labelled on the site as illustrative images.
 - Production-line scenes: drawn SVG.

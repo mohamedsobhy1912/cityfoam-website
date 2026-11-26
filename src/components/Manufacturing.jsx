@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import SectionHead from './SectionHead.jsx';
 import { useLang } from '../lib/i18n.jsx';
-import { gsap, ScrollTrigger, useGSAP } from '../lib/motion.js';
+import { gsap, ScrollTrigger, useGSAP, asset, prefersReducedMotion } from '../lib/motion.js';
 import defs from '../scenes/defs.svg?raw';
 import base from '../scenes/base.svg?raw';
 import s1 from '../scenes/s1.svg?raw';
@@ -29,6 +29,10 @@ export default function Manufacturing() {
 
   useGSAP(
     () => {
+      if (!prefersReducedMotion()) {
+        gsap.fromTo('.mfg__banner', { clipPath: 'inset(0% 12% 0% 12%)' }, { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none', scrollTrigger: { trigger: '.mfg__banner', start: 'top 90%', end: 'top 35%', scrub: true } });
+        gsap.fromTo('.mfg__banner img', { yPercent: -10, scale: 1.12 }, { yPercent: 6, scale: 1.02, ease: 'none', scrollTrigger: { trigger: '.mfg__banner', start: 'top bottom', end: 'bottom top', scrub: true } });
+      }
       const mm = gsap.matchMedia();
       // Desktop: pin the stage and step through the four scenes with scroll.
       mm.add('(min-width: 960px) and (prefers-reduced-motion: no-preference)', () => {
@@ -58,6 +62,13 @@ export default function Manufacturing() {
       </svg>
       <div className="container">
         <SectionHead id="mfg-title" eyebrow={m.eyebrow} title={m.title} lead={m.lead} />
+        <figure className="mfg__banner">
+          <picture>
+            <source srcSet={asset('media/ai/plant.webp')} type="image/webp" />
+            <img src={asset('media/ai/plant.jpg')} alt={m.banner.alt} loading="lazy" width="2000" height="1131" />
+          </picture>
+          <figcaption className="img-note">{m.banner.caption}</figcaption>
+        </figure>
       </div>
 
       {/* Desktop: pinned stage */}

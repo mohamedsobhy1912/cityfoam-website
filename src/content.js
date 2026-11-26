@@ -69,6 +69,7 @@ export const CONTENT = {
       specLabel: 'المواصفات',
       appsLabel: 'الاستخدامات',
       cta: 'اطلب التفاصيل',
+      illustrative: 'صورة توضيحية',
       items: [
         {
           key: 'blocks',
@@ -76,7 +77,7 @@ export const CONTENT = {
           desc: 'بلوكات إسفنج كبيرة تُصب على خط الإنتاج المستمر، بكثافات وألوان متعددة.',
           apps: ['مصانع المراتب', 'مصانع الأثاث', 'ورش التقطيع والتحويل'],
           specs: [['الشكل', 'بلوكات كاملة'], ['الكثافة', 'حسب الطلب'], ['اللون', 'ألوان متعددة']],
-          img: 'media/gallery/yard-aisle.jpg'
+          img: 'media/ai/blocks'
         },
         {
           key: 'sheets',
@@ -84,7 +85,7 @@ export const CONTENT = {
           desc: 'نقطّع البلوكات إلى شيتات بالسُمك المطلوب، وبالمقاسات التي يحددها العميل.',
           apps: ['التنجيد', 'طبقات المراتب', 'المساند والوسائد'],
           specs: [['السُمك', 'حسب الطلب'], ['المقاس', 'حسب مواصفات العميل'], ['الكثافة', 'حسب الطلب']],
-          img: 'media/gallery/yard-wall.jpg'
+          img: 'media/ai/sheets'
         },
         {
           key: 'mattresses',
@@ -92,7 +93,7 @@ export const CONTENT = {
           desc: 'مراتب مصنوعة من إسفنج سيتي فوم، للبيوت والفنادق والموزعين.',
           apps: ['البيوت', 'الفنادق', 'تجار ومعارض الأثاث'],
           specs: [['المقاسات', 'حسب الطلب'], ['الخامة', 'إسفنج سيتي فوم'], ['التوريد', 'أفراد وجملة']],
-          img: 'img/products/medical.jpg'
+          img: 'media/ai/mattress'
         }
       ]
     },
@@ -111,7 +112,8 @@ export const CONTENT = {
         title: 'قلب خط الإنتاج: Hennecke',
         text: 'نعتمد على ماكينة صب من Hennecke الألمانية لقياس المكوّنات وخلطها بدقة. هذه الدقة هي ما يجعل اللون والكثافة ثابتين من بلوك لآخر.'
       },
-      note: 'رسوم توضيحية لمراحل الإنتاج'
+      note: 'رسوم توضيحية لمراحل الإنتاج',
+      banner: { alt: 'خط إنتاج إسفنج بولي يوريثان مستمر', caption: 'صورة توضيحية لخط صب الإسفنج المستمر' }
     },
     quality: {
       eyebrow: 'الجودة والتكنولوجيا',
@@ -237,6 +239,7 @@ export const CONTENT = {
       specLabel: 'Specifications',
       appsLabel: 'Applications',
       cta: 'Request details',
+      illustrative: 'Illustrative image',
       items: [
         {
           key: 'blocks',
@@ -244,7 +247,7 @@ export const CONTENT = {
           desc: 'Large-format foam blocks poured on our continuous foaming line, in multiple densities and colors.',
           apps: ['Mattress manufacturers', 'Furniture factories', 'Foam converters'],
           specs: [['Format', 'Full blocks'], ['Density', 'On request'], ['Color', 'Multiple colors']],
-          img: 'media/gallery/yard-aisle.jpg'
+          img: 'media/ai/blocks'
         },
         {
           key: 'sheets',
@@ -252,7 +255,7 @@ export const CONTENT = {
           desc: 'Blocks sliced into sheets of the thickness you need and cut to the dimensions you specify.',
           apps: ['Upholstery', 'Mattress layers', 'Cushions & seating'],
           specs: [['Thickness', 'On request'], ['Dimensions', 'To customer spec'], ['Density', 'On request']],
-          img: 'media/gallery/yard-wall.jpg'
+          img: 'media/ai/sheets'
         },
         {
           key: 'mattresses',
@@ -260,7 +263,7 @@ export const CONTENT = {
           desc: 'Mattresses made with City Foam foam, for homes, hotels and distributors.',
           apps: ['Homes', 'Hotels', 'Furniture retailers'],
           specs: [['Sizes', 'On request'], ['Core', 'City Foam foam'], ['Supply', 'Retail & wholesale']],
-          img: 'img/products/medical.jpg'
+          img: 'media/ai/mattress'
         }
       ]
     },
@@ -279,7 +282,8 @@ export const CONTENT = {
         title: 'The heart of the line: Hennecke',
         text: 'We rely on a German Hennecke foaming machine to meter and mix components precisely. That precision is what keeps color and density consistent from block to block.'
       },
-      note: 'Illustrations of the production stages'
+      note: 'Illustrations of the production stages',
+      banner: { alt: 'Continuous polyurethane foam production line', caption: 'Illustrative image of a continuous slabstock foaming line' }
     },
     quality: {
       eyebrow: 'Quality & Technology',

@@ -31,7 +31,11 @@ export default function Products() {
           {c.products.items.map((p, i) => (
             <article className={`product${i % 2 ? ' product--flip' : ''}`} key={p.key}>
               <div className="product__media">
-                <img src={asset(p.img)} alt={p.name} loading="lazy" />
+                <picture>
+                  <source srcSet={asset(`${p.img}.webp`)} type="image/webp" />
+                  <img src={asset(`${p.img}.jpg`)} alt={p.name} loading="lazy" width="1600" height="1280" />
+                </picture>
+                <span className="img-note">{c.products.illustrative}</span>
                 <span className="product__index">0{i + 1}</span>
               </div>
               <div className="product__body">
